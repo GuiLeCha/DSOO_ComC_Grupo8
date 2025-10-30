@@ -1,0 +1,24 @@
+﻿# Archivos y carpetas de Visual Studio a ignorar
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.pdb
+*.cache
+*.log
+*.dbmdl
+*.bak
+*.zip
+*.tmp
+
+# Archivos de configuración temporales
+*.DS_Store
+Thumbs.db
+
+# Archivos de publicación o depuración
+*.Publish.xml
+*.exe
+*.dll
+*.json
+*.config
