@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using ClubDeportivo.Formularios;
 
 namespace ClubDeportivo.Formularios
 {
@@ -19,7 +20,7 @@ namespace ClubDeportivo.Formularios
 
         private void btnRegistrarSocio_Click(object sender, EventArgs e)
         {
-            FrmRegistrarSocio frm = new FrmRegistrarSocio();
+            FrmRegistrarPersona frm = new FrmRegistrarPersona();
             frm.Show();
             this.Hide();
         }

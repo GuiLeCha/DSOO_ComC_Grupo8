@@ -1,6 +1,6 @@
 ﻿namespace ClubDeportivo.Formularios
 {
-    partial class FrmRegistrarSocio
+    partial class FrmRegistrarPersona
     {
         /// <summary>
         /// Required designer variable.
@@ -54,6 +54,13 @@
             lblFechaNacimiento = new Label();
             lbltxtNroSocio = new Label();
             lblFechaIngreso = new Label();
+            chkAptoPresentado = new CheckBox();
+            txtObservacionesApto = new TextBox();
+            grpTipoPersona = new GroupBox();
+            rdbNoSocio = new RadioButton();
+            rdbSocio = new RadioButton();
+            lblAptoFisico = new Label();
+            grpTipoPersona.SuspendLayout();
             SuspendLayout();
             // 
             // txtNombre
@@ -127,17 +134,18 @@
             // 
             // txtNroSocio
             // 
-            txtNroSocio.Location = new Point(214, 376);
+            txtNroSocio.Location = new Point(213, 480);
             txtNroSocio.Margin = new Padding(3, 4, 3, 4);
             txtNroSocio.Name = "txtNroSocio";
             txtNroSocio.ReadOnly = true;
             txtNroSocio.Size = new Size(114, 27);
             txtNroSocio.TabIndex = 8;
+            txtNroSocio.Visible = false;
             // 
             // dtpFechaIngreso
             // 
             dtpFechaIngreso.Format = DateTimePickerFormat.Short;
-            dtpFechaIngreso.Location = new Point(214, 341);
+            dtpFechaIngreso.Location = new Point(213, 445);
             dtpFechaIngreso.Margin = new Padding(3, 4, 3, 4);
             dtpFechaIngreso.MaxDate = new DateTime(2100, 12, 31, 0, 0, 0, 0);
             dtpFechaIngreso.MinDate = new DateTime(1800, 1, 1, 0, 0, 0, 0);
@@ -148,17 +156,18 @@
             // chkCuotaVigente
             // 
             chkCuotaVigente.AutoSize = true;
-            chkCuotaVigente.Location = new Point(377, 361);
+            chkCuotaVigente.Location = new Point(376, 465);
             chkCuotaVigente.Margin = new Padding(3, 4, 3, 4);
             chkCuotaVigente.Name = "chkCuotaVigente";
             chkCuotaVigente.Size = new Size(123, 24);
             chkCuotaVigente.TabIndex = 10;
             chkCuotaVigente.Text = "Cuota vigente";
             chkCuotaVigente.UseVisualStyleBackColor = true;
+            chkCuotaVigente.Visible = false;
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(175, 476);
+            btnGuardar.Location = new Point(174, 580);
             btnGuardar.Margin = new Padding(3, 4, 3, 4);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(88, 61);
@@ -169,7 +178,7 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(377, 476);
+            btnLimpiar.Location = new Point(376, 580);
             btnLimpiar.Margin = new Padding(3, 4, 3, 4);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(90, 63);
@@ -180,7 +189,7 @@
             // 
             // btnVolver
             // 
-            btnVolver.Location = new Point(584, 476);
+            btnVolver.Location = new Point(583, 580);
             btnVolver.Margin = new Padding(3, 4, 3, 4);
             btnVolver.Name = "btnVolver";
             btnVolver.Size = new Size(87, 60);
@@ -201,7 +210,7 @@
             // lblDatosDeSocio
             // 
             lblDatosDeSocio.AutoSize = true;
-            lblDatosDeSocio.Location = new Point(154, 304);
+            lblDatosDeSocio.Location = new Point(116, 403);
             lblDatosDeSocio.Name = "lblDatosDeSocio";
             lblDatosDeSocio.Size = new Size(110, 20);
             lblDatosDeSocio.TabIndex = 15;
@@ -282,27 +291,92 @@
             // lbltxtNroSocio
             // 
             lbltxtNroSocio.AutoSize = true;
-            lbltxtNroSocio.Location = new Point(84, 376);
+            lbltxtNroSocio.Location = new Point(83, 480);
             lbltxtNroSocio.Name = "lbltxtNroSocio";
             lbltxtNroSocio.Size = new Size(78, 20);
             lbltxtNroSocio.TabIndex = 24;
             lbltxtNroSocio.Text = "Nro Socio:";
+            lbltxtNroSocio.Visible = false;
             // 
             // lblFechaIngreso
             // 
             lblFechaIngreso.AutoSize = true;
-            lblFechaIngreso.Location = new Point(84, 339);
+            lblFechaIngreso.Location = new Point(83, 443);
             lblFechaIngreso.Name = "lblFechaIngreso";
             lblFechaIngreso.Size = new Size(124, 20);
             lblFechaIngreso.TabIndex = 25;
             lblFechaIngreso.Text = "Fecha de Ingreso:";
             // 
-            // FrmRegistrarSocio
+            // chkAptoPresentado
+            // 
+            chkAptoPresentado.AutoSize = true;
+            chkAptoPresentado.Location = new Point(391, 322);
+            chkAptoPresentado.Name = "chkAptoPresentado";
+            chkAptoPresentado.Size = new Size(182, 24);
+            chkAptoPresentado.TabIndex = 26;
+            chkAptoPresentado.Text = "Apto físico presentado";
+            chkAptoPresentado.UseVisualStyleBackColor = true;
+            // 
+            // txtObservacionesApto
+            // 
+            txtObservacionesApto.Location = new Point(600, 310);
+            txtObservacionesApto.Multiline = true;
+            txtObservacionesApto.Name = "txtObservacionesApto";
+            txtObservacionesApto.Size = new Size(250, 50);
+            txtObservacionesApto.TabIndex = 27;
+            // 
+            // grpTipoPersona
+            // 
+            grpTipoPersona.Controls.Add(rdbNoSocio);
+            grpTipoPersona.Controls.Add(rdbSocio);
+            grpTipoPersona.Location = new Point(68, 281);
+            grpTipoPersona.Name = "grpTipoPersona";
+            grpTipoPersona.Size = new Size(250, 91);
+            grpTipoPersona.TabIndex = 28;
+            grpTipoPersona.TabStop = false;
+            grpTipoPersona.Text = "Tipo de Persona";
+            // 
+            // rdbNoSocio
+            // 
+            rdbNoSocio.AutoSize = true;
+            rdbNoSocio.Location = new Point(148, 41);
+            rdbNoSocio.Name = "rdbNoSocio";
+            rdbNoSocio.Size = new Size(91, 24);
+            rdbNoSocio.TabIndex = 1;
+            rdbNoSocio.Text = "No Socio";
+            rdbNoSocio.UseVisualStyleBackColor = true;
+            // 
+            // rdbSocio
+            // 
+            rdbSocio.AutoSize = true;
+            rdbSocio.Checked = true;
+            rdbSocio.Location = new Point(33, 41);
+            rdbSocio.Name = "rdbSocio";
+            rdbSocio.Size = new Size(67, 24);
+            rdbSocio.TabIndex = 0;
+            rdbSocio.TabStop = true;
+            rdbSocio.Text = "Socio";
+            rdbSocio.UseVisualStyleBackColor = true;
+            // 
+            // lblAptoFisico
+            // 
+            lblAptoFisico.AutoSize = true;
+            lblAptoFisico.Location = new Point(568, 257);
+            lblAptoFisico.Name = "lblAptoFisico";
+            lblAptoFisico.Size = new Size(83, 20);
+            lblAptoFisico.TabIndex = 29;
+            lblAptoFisico.Text = "Apto Físico";
+            // 
+            // FrmRegistrarPersona
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(914, 654);
+            Controls.Add(lblAptoFisico);
+            Controls.Add(grpTipoPersona);
+            Controls.Add(txtObservacionesApto);
+            Controls.Add(chkAptoPresentado);
             Controls.Add(lblFechaIngreso);
             Controls.Add(lbltxtNroSocio);
             Controls.Add(lblFechaNacimiento);
@@ -330,9 +404,11 @@
             Controls.Add(txtApellido);
             Controls.Add(txtNombre);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "FrmRegistrarSocio";
-            Text = "Club Deportivo - Registrar Nuevo Socio";
-            Load += FrmRegistrarSocio_Load;
+            Name = "FrmRegistrarPersona";
+            Text = "Club Deportivo - Registrar Persona";
+            Load += FrmRegistrarPersona_Load;
+            grpTipoPersona.ResumeLayout(false);
+            grpTipoPersona.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -365,5 +441,11 @@
         private Label lblFechaNacimiento;
         private Label lbltxtNroSocio;
         private Label lblFechaIngreso;
+        private CheckBox chkAptoPresentado;
+        private TextBox txtObservacionesApto;
+        private GroupBox grpTipoPersona;
+        private RadioButton rdbNoSocio;
+        private RadioButton rdbSocio;
+        private Label lblAptoFisico;
     }
 }

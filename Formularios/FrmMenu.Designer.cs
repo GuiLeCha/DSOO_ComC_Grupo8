@@ -28,72 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnRegistrarSocio = new Button();
+            btnRegistrarPersona = new Button();
             btnActividades = new Button();
             btnReportes = new Button();
             btnSalir = new Button();
-            button1 = new Button();
             SuspendLayout();
             // 
-            // btnRegistrarSocio
+            // btnRegistrarPersona
             // 
-            btnRegistrarSocio.Location = new Point(136, 41);
-            btnRegistrarSocio.Name = "btnRegistrarSocio";
-            btnRegistrarSocio.Size = new Size(84, 66);
-            btnRegistrarSocio.TabIndex = 0;
-            btnRegistrarSocio.Text = "Registrar nuevo Socio";
-            btnRegistrarSocio.UseVisualStyleBackColor = true;
-            btnRegistrarSocio.Click += btnRegistrarSocio_Click;
+            btnRegistrarPersona.Location = new Point(238, 26);
+            btnRegistrarPersona.Margin = new Padding(3, 4, 3, 4);
+            btnRegistrarPersona.Name = "btnRegistrarPersona";
+            btnRegistrarPersona.Size = new Size(268, 88);
+            btnRegistrarPersona.TabIndex = 0;
+            btnRegistrarPersona.Text = "Registrar Persona (Socio / No Socio)";
+            btnRegistrarPersona.UseVisualStyleBackColor = true;
+            btnRegistrarPersona.Click += btnRegistrarSocio_Click;
             // 
             // btnActividades
             // 
-            btnActividades.Location = new Point(399, 128);
+            btnActividades.Location = new Point(238, 250);
+            btnActividades.Margin = new Padding(3, 4, 3, 4);
             btnActividades.Name = "btnActividades";
-            btnActividades.Size = new Size(84, 61);
+            btnActividades.Size = new Size(268, 81);
             btnActividades.TabIndex = 3;
             btnActividades.Text = "Actividades";
             btnActividades.UseVisualStyleBackColor = true;
             // 
             // btnReportes
             // 
-            btnReportes.Location = new Point(136, 128);
+            btnReportes.Location = new Point(238, 142);
+            btnReportes.Margin = new Padding(3, 4, 3, 4);
             btnReportes.Name = "btnReportes";
-            btnReportes.Size = new Size(84, 61);
+            btnReportes.Size = new Size(268, 81);
             btnReportes.TabIndex = 2;
             btnReportes.Text = "Reportes";
             btnReportes.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(271, 207);
+            btnSalir.Location = new Point(238, 353);
+            btnSalir.Margin = new Padding(3, 4, 3, 4);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(84, 46);
+            btnSalir.Size = new Size(268, 61);
             btnSalir.TabIndex = 4;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
             // 
-            // button1
-            // 
-            button1.Location = new Point(399, 41);
-            button1.Name = "button1";
-            button1.Size = new Size(84, 66);
-            button1.TabIndex = 1;
-            button1.Text = "Registrar nuevo NoSocio";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // FrmMenu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(700, 338);
-            Controls.Add(button1);
+            ClientSize = new Size(800, 451);
             Controls.Add(btnSalir);
             Controls.Add(btnReportes);
             Controls.Add(btnActividades);
-            Controls.Add(btnRegistrarSocio);
-            Margin = new Padding(3, 2, 3, 2);
+            Controls.Add(btnRegistrarPersona);
             Name = "FrmMenu";
             Text = "Club Deportivo - Menú Principal";
             ResumeLayout(false);
@@ -101,10 +93,9 @@
 
         #endregion
 
-        private Button btnRegistrarSocio;
+        private Button btnRegistrarPersona;
         private Button btnActividades;
         private Button btnReportes;
         private Button btnSalir;
-        private Button button1;
     }
 }

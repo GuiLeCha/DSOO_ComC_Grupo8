@@ -43,3 +43,17 @@ Hasta el momento el sistema incluye:
 
 El objetivo del proyecto no es hacer un sistema perfecto, sino demostrar que entendimos los conceptos principales de la materia y que podemos aplicarlos en un desarrollo real.
 Cada avance del sistema se sube a este repositorio para mostrar el progreso del grupo en las distintas etapas del proyecto.
+
+---
+
+## Actualización del registro de personas (30/10/2025)
+
+Descripción:
+Se unificó el alta de socios y no socios en un solo formulario (FrmRegistrarPersona).  
+Se incorporaron validaciones completas de datos, control de duplicados y apto físico obligatorio.  
+Se eliminó el formulario anterior de socios, se ajustó el menú principal y se actualizó la base con las tablas persona, socios, nosocios y aptosfisicos.
+
+Resultado:
+El sistema permite registrar correctamente tanto socios como no socios, validando los datos y exigiendo la presentación del apto físico antes de guardar.
+
+---
