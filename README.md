@@ -57,3 +57,26 @@ Resultado:
 El sistema permite registrar correctamente tanto socios como no socios, validando los datos y exigiendo la presentación del apto físico antes de guardar.
 
 ---
+
+## Actualización: 31 de octubre de 2025
+
+En esta actuailzación se incorporaron las funcionalidades correspondientes al módulo de pagos y la emisión del carnet de socio.
+
+### Cambios principales
+- Apertura automática del formulario de pago al registrar una persona.  
+- Validación de tipo de persona (Socio / No Socio).  
+- Registro de pagos con comprobante impreso.  
+- Emisión automática de carnet para socios en su primer pago.  
+- Integración completa con base de datos MySQL.  
+- Impresión de comprobantes y carnets mediante PrintDocument.  
+- Limpieza de código y comentarios ajustados al material docente.
+
+### Pruebas realizadas
+- Registro y conversión de persona (socio / no socio).  
+- Inserción de pagos en tabla pago.  
+- Generación de carnet (tabla carnet).  
+- Comprobante de pago con vista previa de impresión.  
+- Validaciones de campos y controles de conexión.  
+
+---
+

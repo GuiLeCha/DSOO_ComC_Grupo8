@@ -14,20 +14,15 @@ namespace ClubDeportivo.Formularios
 
         private void FrmRegistrarPersona_Load(object sender, EventArgs e)
         {
-            // Cargamos valores iniciales del formulario
             dtpFechaIngreso.Value = DateTime.Today;
             cboTipoDocumento.Items.Clear();
             cboTipoDocumento.Items.Add("DNI");
             cboTipoDocumento.Items.Add("Pasaporte");
             cboTipoDocumento.Items.Add("LC/LE");
 
-            // Dejamos marcado por defecto el tipo Socio
             rdbSocio.Checked = true;
-
-            // El apto físico siempre debe estar tildado al iniciar
             chkAptoPresentado.Checked = true;
 
-            // Ocultamos los campos que todavía no usamos en esta etapa
             chkCuotaVigente.Visible = false;
             txtNroSocio.Visible = false;
             lbltxtNroSocio.Visible = false;
@@ -37,8 +32,7 @@ namespace ClubDeportivo.Formularios
         {
             try
             {
-                // --- VALIDACIONES BÁSICAS DE CAMPOS OBLIGATORIOS ---
-
+                // Validaciones de campos obligatorios y formato
                 if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
                     string.IsNullOrWhiteSpace(txtApellido.Text) ||
                     cboTipoDocumento.SelectedIndex == -1 ||
@@ -51,8 +45,6 @@ namespace ClubDeportivo.Formularios
                         "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-
-                // --- VALIDACIÓN DE LONGITUD Y FORMATO ---
 
                 if (!long.TryParse(txtNumeroDocumento.Text, out _) || txtNumeroDocumento.Text.Length > 10)
                 {
@@ -82,8 +74,6 @@ namespace ClubDeportivo.Formularios
                     return;
                 }
 
-                // --- VALIDACIÓN DE APTO FÍSICO ---
-
                 if (!chkAptoPresentado.Checked)
                 {
                     MessageBox.Show("Debe presentar el Apto Físico para completar el registro.",
@@ -91,29 +81,23 @@ namespace ClubDeportivo.Formularios
                     return;
                 }
 
-                // --- CONEXIÓN A LA BASE DE DATOS ---
-
                 string cadenaConexion = ConfigurationManager.ConnectionStrings["cadenaConexion"].ConnectionString;
                 using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
                 {
                     conexion.Open();
 
-                    // Verificamos si ya existe la persona en la tabla persona
                     string sqlCheck = "SELECT idPersona FROM persona WHERE tipoDocumento = @tipo AND numeroDocumento = @numero";
                     MySqlCommand cmdCheck = new MySqlCommand(sqlCheck, conexion);
                     cmdCheck.Parameters.AddWithValue("@tipo", cboTipoDocumento.Text);
                     cmdCheck.Parameters.AddWithValue("@numero", txtNumeroDocumento.Text);
-
                     object resultado = cmdCheck.ExecuteScalar();
 
                     long idPersona;
 
                     if (resultado != null)
                     {
-                        // Ya existe la persona
                         idPersona = Convert.ToInt64(resultado);
 
-                        // Verificamos si ya es socio
                         string sqlSocioCheck = "SELECT COUNT(*) FROM socios WHERE idPersona = @id";
                         MySqlCommand cmdSocioCheck = new MySqlCommand(sqlSocioCheck, conexion);
                         cmdSocioCheck.Parameters.AddWithValue("@id", idPersona);
@@ -126,7 +110,6 @@ namespace ClubDeportivo.Formularios
                             return;
                         }
 
-                        // Si no es socio y el usuario eligió Socio, se convierte
                         if (rdbSocio.Checked)
                         {
                             DialogResult respuesta = MessageBox.Show("La persona ya está registrada como No Socio. ¿Desea convertirla en Socio?",
@@ -143,6 +126,9 @@ namespace ClubDeportivo.Formularios
 
                                 MessageBox.Show("La persona fue convertida en socio correctamente.",
                                     "Conversión exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                FrmPagos frmPagos = new FrmPagos((int)idPersona, "Socio");
+                                frmPagos.ShowDialog();
                             }
                             return;
                         }
@@ -155,8 +141,7 @@ namespace ClubDeportivo.Formularios
                     }
                     else
                     {
-                        // --- NUEVO REGISTRO DE PERSONA ---
-
+                        // Inserta la nueva persona
                         string sqlPersona = "INSERT INTO persona (nombre, apellido, tipoDocumento, numeroDocumento, direccion, telefono, email, fechaNacimiento) " +
                                             "VALUES (@nombre, @apellido, @tipo, @numero, @direccion, @telefono, @correo, @fechaNac)";
                         MySqlCommand cmdPersona = new MySqlCommand(sqlPersona, conexion);
@@ -172,7 +157,7 @@ namespace ClubDeportivo.Formularios
 
                         idPersona = cmdPersona.LastInsertedId;
 
-                        // Insertamos según el tipo de persona seleccionado
+                        // Inserta socio o no socio según corresponda
                         if (rdbSocio.Checked)
                         {
                             string sqlSocio = "INSERT INTO socios (idPersona, nroSocioCarnet, fechaIngreso, cuotaVigente) " +
@@ -181,6 +166,9 @@ namespace ClubDeportivo.Formularios
                             cmdSocio.Parameters.AddWithValue("@id", idPersona);
                             cmdSocio.Parameters.AddWithValue("@fecha", dtpFechaIngreso.Value.ToString("yyyy-MM-dd"));
                             cmdSocio.ExecuteNonQuery();
+
+                            FrmPagos frmPagos = new FrmPagos((int)idPersona, "Socio");
+                            frmPagos.ShowDialog();
                         }
                         else
                         {
@@ -188,9 +176,12 @@ namespace ClubDeportivo.Formularios
                             MySqlCommand cmdNoSocio = new MySqlCommand(sqlNoSocio, conexion);
                             cmdNoSocio.Parameters.AddWithValue("@id", idPersona);
                             cmdNoSocio.ExecuteNonQuery();
+
+                            FrmPagos frmPagos = new FrmPagos((int)idPersona, "NoSocio");
+                            frmPagos.ShowDialog();
                         }
 
-                        // Insertamos el Apto Físico (obligatorio)
+                        // Registra el apto físico obligatorio
                         string sqlApto = "INSERT INTO aptosfisicos (idPersona, fechaPresentacion, observaciones) " +
                                          "VALUES (@id, @fechaApto, @obs)";
                         MySqlCommand cmdApto = new MySqlCommand(sqlApto, conexion);
@@ -227,7 +218,6 @@ namespace ClubDeportivo.Formularios
 
         private void LimpiarCampos()
         {
-            // Deja el formulario vacío para una nueva carga
             txtNombre.Clear();
             txtApellido.Clear();
             cboTipoDocumento.SelectedIndex = -1;

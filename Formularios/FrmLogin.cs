@@ -1,12 +1,5 @@
 ﻿using ClubDeportivo.Conexion;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -17,6 +10,7 @@ namespace ClubDeportivo.Formularios
         public FrmLogin()
         {
             InitializeComponent();
+            this.AcceptButton = btnIngresar; // Permite ingresar con la tecla Enter
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -25,32 +19,30 @@ namespace ClubDeportivo.Formularios
 
             try
             {
-                con.AbrirConexion();
-
-                string query = "SELECT * FROM usuarios WHERE usuario = @usuario AND clave = @clave";
-
-                MySqlCommand cmd = new MySqlCommand(query, con.AbrirConexion());
-                cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
-                cmd.Parameters.AddWithValue("@clave", txtClave.Text);
-
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.HasRows)
+                using (MySqlConnection cn = con.AbrirConexion())
                 {
-                    MessageBox.Show("Ingreso exitoso. Bienvenido al Club Deportivo.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FrmMenu menu = new FrmMenu();
-                    menu.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Usuario o contraseña incorrectos.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string query = "SELECT * FROM usuarios WHERE usuario = @usuario AND clave = @clave";
+                    MySqlCommand cmd = new MySqlCommand(query, cn);
+                    cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
+                    cmd.Parameters.AddWithValue("@clave", txtClave.Text);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        MessageBox.Show("Ingreso exitoso. Bienvenido al Club Deportivo.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FrmMenu menu = new FrmMenu();
+                        menu.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario o contraseña incorrectos.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    reader.Close();
                 }
 
-                reader.Close();
-                con.CerrarConexion();
-
-                // Limpiar datos
                 txtUsuario.Clear();
                 txtClave.Clear();
             }

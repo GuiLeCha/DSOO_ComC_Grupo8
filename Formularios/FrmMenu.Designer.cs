@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnRegistrarPersona = new Button();
-            btnActividades = new Button();
+            btnPagos = new Button();
             btnReportes = new Button();
             btnSalir = new Button();
             SuspendLayout();
@@ -45,15 +45,16 @@
             btnRegistrarPersona.UseVisualStyleBackColor = true;
             btnRegistrarPersona.Click += btnRegistrarSocio_Click;
             // 
-            // btnActividades
+            // btnPagos
             // 
-            btnActividades.Location = new Point(238, 250);
-            btnActividades.Margin = new Padding(3, 4, 3, 4);
-            btnActividades.Name = "btnActividades";
-            btnActividades.Size = new Size(268, 81);
-            btnActividades.TabIndex = 3;
-            btnActividades.Text = "Actividades";
-            btnActividades.UseVisualStyleBackColor = true;
+            btnPagos.Location = new Point(238, 250);
+            btnPagos.Margin = new Padding(3, 4, 3, 4);
+            btnPagos.Name = "btnPagos";
+            btnPagos.Size = new Size(268, 81);
+            btnPagos.TabIndex = 3;
+            btnPagos.Text = "Pagos";
+            btnPagos.UseVisualStyleBackColor = true;
+            btnPagos.Click += btnPagos_Click;
             // 
             // btnReportes
             // 
@@ -84,7 +85,7 @@
             ClientSize = new Size(800, 451);
             Controls.Add(btnSalir);
             Controls.Add(btnReportes);
-            Controls.Add(btnActividades);
+            Controls.Add(btnPagos);
             Controls.Add(btnRegistrarPersona);
             Name = "FrmMenu";
             Text = "Club Deportivo - Menú Principal";
@@ -94,7 +95,7 @@
         #endregion
 
         private Button btnRegistrarPersona;
-        private Button btnActividades;
+        private Button btnPagos;
         private Button btnReportes;
         private Button btnSalir;
     }

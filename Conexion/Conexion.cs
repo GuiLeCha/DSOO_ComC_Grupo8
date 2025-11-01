@@ -6,26 +6,20 @@ namespace ClubDeportivo.Conexion
 {
     public class Conexion
     {
-        private MySqlConnection conectar;
-
-        public Conexion()
-        {
-            string cadena = ConfigurationManager.ConnectionStrings["cadenaConexion"].ConnectionString;
-            conectar = new MySqlConnection(cadena);
-        }
-
+        // Abre y devuelve una conexión a la base de datos
         public MySqlConnection AbrirConexion()
         {
-            if (conectar.State == ConnectionState.Closed)
-                conectar.Open();
-            return conectar;
+            string cadena = ConfigurationManager.ConnectionStrings["cadenaConexion"].ConnectionString;
+            MySqlConnection cn = new MySqlConnection(cadena);
+            cn.Open();
+            return cn;
         }
 
-        public MySqlConnection CerrarConexion()
+        // Cierra la conexión si está abierta
+        public void CerrarConexion(MySqlConnection cn)
         {
-            if (conectar.State == ConnectionState.Open)
-                conectar.Close();
-            return conectar;
+            if (cn != null && cn.State == ConnectionState.Open)
+                cn.Close();
         }
     }
 }

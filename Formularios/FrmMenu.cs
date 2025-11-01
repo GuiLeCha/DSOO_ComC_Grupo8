@@ -25,5 +25,10 @@ namespace ClubDeportivo.Formularios
             this.Hide();
         }
 
+        private void btnPagos_Click(object sender, EventArgs e)
+        {
+            FrmPagos formPagos = new FrmPagos();
+            formPagos.ShowDialog();
+        }
     }
 }
