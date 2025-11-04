@@ -22,3 +22,6 @@ Thumbs.db
 *.dll
 *.json
 *.config
+
+# Incluir archivo App.config
+!App.config

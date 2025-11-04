@@ -43,6 +43,7 @@ Hasta el momento el sistema incluye:
 
 El objetivo del proyecto no es hacer un sistema perfecto, sino demostrar que entendimos los conceptos principales de la materia y que podemos aplicarlos en un desarrollo real.
 Cada avance del sistema se sube a este repositorio para mostrar el progreso del grupo en las distintas etapas del proyecto.
+El archivo App.config posee seteado en la cadena de conexión local el usuario "root" y contraseña "toor", recordar modificarlo para hacer coincidir con las credenciales necesarias
 
 ---
 
@@ -79,4 +80,8 @@ En esta actuailzación se incorporaron las funcionalidades correspondientes al m
 - Validaciones de campos y controles de conexión.  
 
 ---
+## Actualización: 4 de noviembre de 2025
 
+En esta actuailzación se Se incorporó el reporte de cuotas vencidas (Listado Diario de Morosos), e impresión del mismo.
+
+---

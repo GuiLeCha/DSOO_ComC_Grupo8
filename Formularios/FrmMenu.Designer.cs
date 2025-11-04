@@ -36,10 +36,9 @@
             // 
             // btnRegistrarPersona
             // 
-            btnRegistrarPersona.Location = new Point(238, 26);
-            btnRegistrarPersona.Margin = new Padding(3, 4, 3, 4);
+            btnRegistrarPersona.Location = new Point(208, 20);
             btnRegistrarPersona.Name = "btnRegistrarPersona";
-            btnRegistrarPersona.Size = new Size(268, 88);
+            btnRegistrarPersona.Size = new Size(234, 66);
             btnRegistrarPersona.TabIndex = 0;
             btnRegistrarPersona.Text = "Registrar Persona (Socio / No Socio)";
             btnRegistrarPersona.UseVisualStyleBackColor = true;
@@ -47,10 +46,9 @@
             // 
             // btnPagos
             // 
-            btnPagos.Location = new Point(238, 250);
-            btnPagos.Margin = new Padding(3, 4, 3, 4);
+            btnPagos.Location = new Point(208, 101);
             btnPagos.Name = "btnPagos";
-            btnPagos.Size = new Size(268, 81);
+            btnPagos.Size = new Size(234, 61);
             btnPagos.TabIndex = 3;
             btnPagos.Text = "Pagos";
             btnPagos.UseVisualStyleBackColor = true;
@@ -58,20 +56,19 @@
             // 
             // btnReportes
             // 
-            btnReportes.Location = new Point(238, 142);
-            btnReportes.Margin = new Padding(3, 4, 3, 4);
+            btnReportes.Location = new Point(208, 188);
             btnReportes.Name = "btnReportes";
-            btnReportes.Size = new Size(268, 81);
+            btnReportes.Size = new Size(234, 61);
             btnReportes.TabIndex = 2;
             btnReportes.Text = "Reportes";
             btnReportes.UseVisualStyleBackColor = true;
+            btnReportes.Click += btnReportes_Click;
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(238, 353);
-            btnSalir.Margin = new Padding(3, 4, 3, 4);
+            btnSalir.Location = new Point(208, 265);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(268, 61);
+            btnSalir.Size = new Size(234, 46);
             btnSalir.TabIndex = 4;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
@@ -79,14 +76,15 @@
             // 
             // FrmMenu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(800, 451);
+            ClientSize = new Size(700, 338);
             Controls.Add(btnSalir);
             Controls.Add(btnReportes);
             Controls.Add(btnPagos);
             Controls.Add(btnRegistrarPersona);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmMenu";
             Text = "Club Deportivo - Menú Principal";
             ResumeLayout(false);

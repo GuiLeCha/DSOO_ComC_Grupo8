@@ -30,5 +30,11 @@ namespace ClubDeportivo.Formularios
             FrmPagos formPagos = new FrmPagos();
             formPagos.ShowDialog();
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            FrmReporteCuotas frm = new FrmReporteCuotas();
+            frm.ShowDialog();
+        }
     }
 }
