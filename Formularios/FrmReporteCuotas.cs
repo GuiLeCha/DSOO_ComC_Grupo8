@@ -8,6 +8,7 @@ using System.Drawing.Printing;
 
 namespace ClubDeportivo.Formularios
 {
+    // Muestra un listado de socios con cuotas vencidas y permite imprimir el reporte
     public partial class FrmReporteCuotas : Form
     {
         private Conexion.Conexion con = new Conexion.Conexion();
@@ -22,9 +23,11 @@ namespace ClubDeportivo.Formularios
 
         private void FrmReporteCuotas_Load(object sender, EventArgs e)
         {
+            // Carga los datos automáticamente al abrir el formulario
             CargarCuotasVencidas();
         }
 
+        // Consulta las cuotas vencidas y las muestra en el DataGridView
         private void CargarCuotasVencidas()
         {
             try
@@ -54,13 +57,14 @@ namespace ClubDeportivo.Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar los datos: " + ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al cargar los datos: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            // Muestra una vista previa del reporte antes de imprimir
             if (datosCuotas == null || datosCuotas.Rows.Count == 0)
             {
                 MessageBox.Show("No hay datos para imprimir.", "Atención",
@@ -74,12 +78,14 @@ namespace ClubDeportivo.Formularios
             vistaPrevia.ShowDialog();
         }
 
+        // Dibuja el contenido del reporte en la hoja de impresión
         private void ImprimirPagina(object sender, PrintPageEventArgs e)
         {
             int margenIzq = 50;
             int margenSup = 80;
             int altoFila = 25;
             int anchoCol = 130;
+
             Font fuenteTitulo = new Font("Arial", 14, FontStyle.Bold);
             Font fuenteCabecera = new Font("Arial", 10, FontStyle.Bold);
             Font fuenteTexto = new Font("Arial", 10, FontStyle.Regular);
@@ -91,14 +97,17 @@ namespace ClubDeportivo.Formularios
             int x = margenIzq;
             int y = margenSup;
 
+            // Encabezado de columnas
             foreach (DataColumn col in datosCuotas.Columns)
             {
                 e.Graphics.DrawString(col.ColumnName, fuenteCabecera, Brushes.Black, x, y);
                 x += anchoCol;
             }
+
             e.Graphics.DrawLine(Pens.Black, margenIzq, y + altoFila - 5, margenIzq + anchoCol * datosCuotas.Columns.Count, y + altoFila - 5);
             y += altoFila;
 
+            // Filas del reporte
             foreach (DataRow fila in datosCuotas.Rows)
             {
                 x = margenIzq;
@@ -107,7 +116,10 @@ namespace ClubDeportivo.Formularios
                     e.Graphics.DrawString(fila[i]?.ToString(), fuenteTexto, Brushes.Black, x, y);
                     x += anchoCol;
                 }
+
                 y += altoFila;
+
+                // Si se llena la página, continúa en otra hoja
                 if (y > e.MarginBounds.Bottom - 50)
                 {
                     e.HasMorePages = true;

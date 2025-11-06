@@ -1,0 +1,637 @@
+ El volumen de la unidad C no tiene etiqueta.
+ El número de serie del volumen es: 3E44-FE47
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8
+
+05/11/2025  15:40    <DIR>          .
+05/11/2025  15:40    <DIR>          ..
+04/11/2025  13:47               341 .gitignore
+05/11/2025  10:21    <DIR>          .vs
+05/11/2025  12:57               337 App.config
+04/11/2025  18:15    <DIR>          BasesDeDatos
+04/11/2025  13:19    <DIR>          bin
+04/11/2025  13:18               970 ClubDeportivo.csproj
+05/11/2025  10:01               990 ClubDeportivo.csproj.user
+04/11/2025  13:18             1.138 ClubDeportivo.sln
+05/11/2025  12:01    <DIR>          Conexion
+04/11/2025  13:18    <DIR>          Entidades
+05/11/2025  13:17    <DIR>          Formularios
+05/11/2025  15:40                95 lista.txt
+05/11/2025  13:26    <DIR>          obj
+05/11/2025  13:25             2.006 Program.cs
+04/11/2025  13:18    <DIR>          Properties
+04/11/2025  18:36             3.274 README.md
+04/11/2025  13:18    <DIR>          Resources
+               8 archivos          9.151 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git
+
+04/11/2025  18:36                74 COMMIT_EDITMSG
+04/11/2025  13:18               327 config
+04/11/2025  13:29               104 FETCH_HEAD
+04/11/2025  13:18                21 HEAD
+04/11/2025  18:36             4.204 index
+04/11/2025  13:18    <DIR>          logs
+04/11/2025  18:36               262 ms-persist.xml
+04/11/2025  18:36    <DIR>          objects
+04/11/2025  13:27                41 ORIG_HEAD
+04/11/2025  13:18               112 packed-refs
+04/11/2025  13:18    <DIR>          refs
+               8 archivos          5.145 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\logs
+
+04/11/2025  13:18    <DIR>          .
+04/11/2025  13:18    <DIR>          ..
+04/11/2025  18:36               397 HEAD
+04/11/2025  13:18    <DIR>          refs
+               1 archivos            397 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\logs\refs
+
+04/11/2025  13:18    <DIR>          .
+04/11/2025  13:18    <DIR>          ..
+04/11/2025  13:18    <DIR>          heads
+04/11/2025  13:18    <DIR>          remotes
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\logs\refs\heads
+
+04/11/2025  13:18    <DIR>          .
+04/11/2025  13:18    <DIR>          ..
+04/11/2025  18:36               397 main
+               1 archivos            397 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\logs\refs\remotes
+
+04/11/2025  13:18    <DIR>          .
+04/11/2025  13:18    <DIR>          ..
+04/11/2025  18:37    <DIR>          origin
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\logs\refs\remotes\origin
+
+04/11/2025  18:37    <DIR>          .
+04/11/2025  18:37    <DIR>          ..
+04/11/2025  13:18               186 HEAD
+04/11/2025  18:37               144 main
+               2 archivos            330 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\objects
+
+04/11/2025  18:36    <DIR>          .
+04/11/2025  18:36    <DIR>          ..
+04/11/2025  18:36    <DIR>          1f
+04/11/2025  18:36    <DIR>          50
+04/11/2025  18:36    <DIR>          63
+04/11/2025  18:36    <DIR>          66
+04/11/2025  18:36    <DIR>          6f
+04/11/2025  18:36    <DIR>          8b
+04/11/2025  18:36    <DIR>          8c
+04/11/2025  18:36    <DIR>          97
+04/11/2025  18:36    <DIR>          c6
+04/11/2025  18:36    <DIR>          c8
+04/11/2025  18:36    <DIR>          dc
+04/11/2025  18:36    <DIR>          df
+04/11/2025  13:18    <DIR>          info
+04/11/2025  13:18    <DIR>          pack
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\objects\1f
+
+04/11/2025  18:36    <DIR>          .
+04/11/2025  18:36    <DIR>          ..
+04/11/2025  18:36             1.090 e0d5d7fc7e096d1933aa7ae79a499446d68951
+               1 archivos          1.090 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\objects\50
+
+04/11/2025  18:36    <DIR>          .
+04/11/2025  18:36    <DIR>          ..
+04/11/2025  18:36             2.756 ddf9214da9a3b497efa6054d764455f9e3fe0e
+               1 archivos          2.756 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\objects\63
+
+04/11/2025  18:36    <DIR>          .
+04/11/2025  18:36    <DIR>          ..
+04/11/2025  18:36               531 fd7ad94caa536e8ebb1c9a5d12a208367358d7
+               1 archivos            531 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\objects\66
+
+04/11/2025  18:36    <DIR>          .
+04/11/2025  18:36    <DIR>          ..
+04/11/2025  18:36             1.504 c66135f53b2a091b6cb726feb8013b95fa614c
+               1 archivos          1.504 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\objects\6f
+
+04/11/2025  18:36    <DIR>          .
+04/11/2025  18:36    <DIR>          ..
+04/11/2025  18:36               143 661297c9b35743db25f6f35e6445364b06764f
+               1 archivos            143 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\objects\8b
+
+04/11/2025  18:36    <DIR>          .
+04/11/2025  18:36    <DIR>          ..
+04/11/2025  18:36             1.619 0f8892da226e3fc72d691d1f2b20499c8018e7
+               1 archivos          1.619 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\objects\8c
+
+04/11/2025  18:36    <DIR>          .
+04/11/2025  18:36    <DIR>          ..
+04/11/2025  18:36               225 3d90ab0be32153760b9ddc4b350a0430bcec34
+               1 archivos            225 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\objects\97
+
+04/11/2025  18:36    <DIR>          .
+04/11/2025  18:36    <DIR>          ..
+04/11/2025  18:36               213 5ae56fc01e68f67abc12a4d92a828bd9c8aa4e
+               1 archivos            213 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\objects\c6
+
+04/11/2025  18:36    <DIR>          .
+04/11/2025  18:36    <DIR>          ..
+04/11/2025  18:36               429 d59eec4f53547c0bcfc8793b15563fd69d7f49
+               1 archivos            429 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\objects\c8
+
+04/11/2025  18:36    <DIR>          .
+04/11/2025  18:36    <DIR>          ..
+04/11/2025  18:36               400 6dff39f4c631d32ecdc6da1db0fa1c571198b7
+               1 archivos            400 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\objects\dc
+
+04/11/2025  18:36    <DIR>          .
+04/11/2025  18:36    <DIR>          ..
+04/11/2025  18:36             1.063 5b90ac8910d44ce8a7b51ea4c3075b481ae4a7
+               1 archivos          1.063 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\objects\df
+
+04/11/2025  18:36    <DIR>          .
+04/11/2025  18:36    <DIR>          ..
+04/11/2025  18:36               247 d2a6d50c72478ca6ec345a062f8dcb022a3366
+               1 archivos            247 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\objects\info
+
+04/11/2025  13:18    <DIR>          .
+04/11/2025  13:18    <DIR>          ..
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\objects\pack
+
+04/11/2025  13:18    <DIR>          .
+04/11/2025  13:18    <DIR>          ..
+04/11/2025  13:18             2.836 pack-02b343fe7913f6b2a2a20425b03d4be782625869.idx
+04/11/2025  18:36            51.732 pack-02b343fe7913f6b2a2a20425b03d4be782625869.pack
+04/11/2025  13:18               304 pack-02b343fe7913f6b2a2a20425b03d4be782625869.rev
+               3 archivos         54.872 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\refs
+
+04/11/2025  13:18    <DIR>          .
+04/11/2025  13:18    <DIR>          ..
+04/11/2025  18:36    <DIR>          heads
+04/11/2025  13:18    <DIR>          remotes
+04/11/2025  13:18    <DIR>          tags
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\refs\heads
+
+04/11/2025  18:36    <DIR>          .
+04/11/2025  18:36    <DIR>          ..
+04/11/2025  18:36                41 main
+               1 archivos             41 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\refs\remotes
+
+04/11/2025  13:18    <DIR>          .
+04/11/2025  13:18    <DIR>          ..
+04/11/2025  18:37    <DIR>          origin
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\refs\remotes\origin
+
+04/11/2025  18:37    <DIR>          .
+04/11/2025  18:37    <DIR>          ..
+04/11/2025  13:18                30 HEAD
+04/11/2025  18:37                41 main
+               2 archivos             71 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.git\refs\tags
+
+04/11/2025  13:18    <DIR>          .
+04/11/2025  13:18    <DIR>          ..
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.vs
+
+05/11/2025  10:21    <DIR>          .
+05/11/2025  10:21    <DIR>          ..
+04/11/2025  13:44    <DIR>          ClubDeportivo
+04/11/2025  13:27    <DIR>          DSOO_ComC_Grupo8
+05/11/2025  10:21    <DIR>          ProjectEvaluation
+04/11/2025  13:33           204.800 slnx.sqlite
+04/11/2025  13:33               132 VSWorkspaceState.json
+               2 archivos        204.932 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.vs\ClubDeportivo
+
+04/11/2025  13:44    <DIR>          .
+04/11/2025  13:44    <DIR>          ..
+04/11/2025  13:34    <DIR>          CopilotIndices
+04/11/2025  13:44    <DIR>          DesignTimeBuild
+05/11/2025  15:40    <DIR>          FileContentIndex
+05/11/2025  13:27    <DIR>          v17
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.vs\ClubDeportivo\CopilotIndices
+
+04/11/2025  13:34    <DIR>          .
+04/11/2025  13:34    <DIR>          ..
+05/11/2025  10:55    <DIR>          17.14.1091.29919
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.vs\ClubDeportivo\CopilotIndices\17.14.1091.29919
+
+05/11/2025  10:55    <DIR>          .
+05/11/2025  10:55    <DIR>          ..
+05/11/2025  10:55           200.704 CodeChunks.db
+05/11/2025  10:55            32.768 CodeChunks.db-shm
+05/11/2025  10:55                32 CodeChunks.db-wal
+05/11/2025  10:55           151.552 SemanticSymbols.db
+05/11/2025  10:55            32.768 SemanticSymbols.db-shm
+05/11/2025  10:55                32 SemanticSymbols.db-wal
+               6 archivos        417.856 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.vs\ClubDeportivo\DesignTimeBuild
+
+04/11/2025  13:44    <DIR>          .
+04/11/2025  13:44    <DIR>          ..
+05/11/2025  12:24           100.653 .dtbcache.v2
+               1 archivos        100.653 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.vs\ClubDeportivo\FileContentIndex
+
+05/11/2025  15:40    <DIR>          .
+05/11/2025  15:40    <DIR>          ..
+05/11/2025  13:25           115.937 6009d046-3b55-4f4e-bac5-8aede4d6a270.vsidx
+05/11/2025  13:05            30.641 705f1d0d-1488-4f8d-ab73-4e3949f1d256.vsidx
+04/11/2025  15:51            19.907 77623195-8703-4b00-b010-cc6b8c95d056.vsidx
+04/11/2025  18:15            21.604 a1ed083a-c336-414a-8365-99d347e67bf3.vsidx
+05/11/2025  15:40            19.875 f62e8300-94b2-40c6-8f01-2b5d590afb0c.vsidx
+               5 archivos        207.964 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.vs\ClubDeportivo\v17
+
+05/11/2025  13:27    <DIR>          .
+05/11/2025  13:27    <DIR>          ..
+05/11/2025  10:48               150 .futdcache.v2
+05/11/2025  13:26             5.313 DocumentLayout.backup.json
+05/11/2025  13:27             5.313 DocumentLayout.json
+               3 archivos         10.776 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.vs\DSOO_ComC_Grupo8
+
+04/11/2025  13:27    <DIR>          .
+04/11/2025  13:27    <DIR>          ..
+04/11/2025  13:27    <DIR>          CopilotIndices
+04/11/2025  13:19    <DIR>          FileContentIndex
+04/11/2025  13:33    <DIR>          v17
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.vs\DSOO_ComC_Grupo8\CopilotIndices
+
+04/11/2025  13:27    <DIR>          .
+04/11/2025  13:27    <DIR>          ..
+04/11/2025  13:33    <DIR>          17.14.1091.29919
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.vs\DSOO_ComC_Grupo8\CopilotIndices\17.14.1091.29919
+
+04/11/2025  13:33    <DIR>          .
+04/11/2025  13:33    <DIR>          ..
+04/11/2025  13:33           151.552 CodeChunks.db
+04/11/2025  13:33           102.400 SemanticSymbols.db
+               2 archivos        253.952 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.vs\DSOO_ComC_Grupo8\FileContentIndex
+
+04/11/2025  13:19    <DIR>          .
+04/11/2025  13:19    <DIR>          ..
+04/11/2025  13:19           117.809 a59032ad-ab14-4584-b83a-43e14a1d9800.vsidx
+               1 archivos        117.809 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.vs\DSOO_ComC_Grupo8\v17
+
+04/11/2025  13:33    <DIR>          .
+04/11/2025  13:33    <DIR>          ..
+04/11/2025  13:28             1.898 DocumentLayout.backup.json
+04/11/2025  13:33               696 DocumentLayout.json
+               2 archivos          2.594 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\.vs\ProjectEvaluation
+
+05/11/2025  10:21    <DIR>          .
+05/11/2025  10:21    <DIR>          ..
+05/11/2025  10:21             1.656 clubdeportivo.metadata.v9.bin
+05/11/2025  10:21            27.799 clubdeportivo.projects.v9.bin
+05/11/2025  10:21           136.285 clubdeportivo.strings.v9.bin
+               3 archivos        165.740 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\BasesDeDatos
+
+04/11/2025  18:15    <DIR>          .
+04/11/2025  18:15    <DIR>          ..
+04/11/2025  13:18            10.253 Base_completa_commit_01_11_25.sql
+04/11/2025  18:15            10.592 Base_inicial_04_11_25.sql
+04/11/2025  13:18             3.287 Base_inicial_30_10_25.sql
+               3 archivos         24.132 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\bin
+
+04/11/2025  13:19    <DIR>          .
+04/11/2025  13:19    <DIR>          ..
+04/11/2025  13:19    <DIR>          Debug
+04/11/2025  13:19    <DIR>          Release
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\bin\Debug
+
+04/11/2025  13:19    <DIR>          .
+04/11/2025  13:19    <DIR>          ..
+05/11/2025  13:27    <DIR>          net6.0-windows
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\bin\Debug\net6.0-windows
+
+05/11/2025  13:27    <DIR>          .
+05/11/2025  13:27    <DIR>          ..
+07/02/2025  03:15         4.870.808 BouncyCastle.Cryptography.dll
+05/11/2025  13:26            19.916 ClubDeportivo.deps.json
+05/11/2025  13:26            76.800 ClubDeportivo.dll
+05/11/2025  13:27               337 ClubDeportivo.dll.config
+05/11/2025  13:26           151.040 ClubDeportivo.exe
+05/11/2025  13:26            29.428 ClubDeportivo.pdb
+05/11/2025  13:26               266 ClubDeportivo.runtimeconfig.json
+04/03/2025  19:16           489.568 Google.Protobuf.dll
+17/03/2024  18:56            70.656 K4os.Compression.LZ4.dll
+17/03/2024  18:56            84.992 K4os.Compression.LZ4.Streams.dll
+08/11/2022  15:08            13.312 K4os.Hash.xxHash.dll
+28/10/2024  23:37            18.696 Microsoft.Bcl.AsyncInterfaces.dll
+26/06/2025  04:33         1.189.960 MySql.Data.dll
+04/11/2025  13:34    <DIR>          runtimes
+31/10/2023  12:04           425.136 System.Configuration.ConfigurationManager.dll
+19/03/2024  16:38           164.512 System.Diagnostics.DiagnosticSource.dll
+28/10/2024  23:43            84.792 System.IO.Pipelines.dll
+31/10/2023  12:01            37.664 System.Security.Cryptography.ProtectedData.dll
+31/10/2023  12:06           115.888 System.Security.Permissions.dll
+31/10/2023  12:08           742.152 System.Text.Encoding.CodePages.dll
+28/10/2024  23:45            79.672 System.Text.Encodings.Web.dll
+28/10/2024  23:47           716.592 System.Text.Json.dll
+31/10/2023  12:03            28.944 System.Windows.Extensions.dll
+26/02/2025  15:10           432.640 ZstdSharp.dll
+              23 archivos      9.843.771 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\bin\Debug\net6.0-windows\runtimes
+
+04/11/2025  13:34    <DIR>          .
+04/11/2025  13:34    <DIR>          ..
+04/11/2025  13:34    <DIR>          win
+04/11/2025  13:33    <DIR>          win-x64
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\bin\Debug\net6.0-windows\runtimes\win
+
+04/11/2025  13:34    <DIR>          .
+04/11/2025  13:34    <DIR>          ..
+04/11/2025  13:34    <DIR>          lib
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\bin\Debug\net6.0-windows\runtimes\win\lib
+
+04/11/2025  13:34    <DIR>          .
+04/11/2025  13:34    <DIR>          ..
+05/11/2025  13:26    <DIR>          net6.0
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0
+
+05/11/2025  13:26    <DIR>          .
+05/11/2025  13:26    <DIR>          ..
+31/10/2023  12:08           743.696 System.Text.Encoding.CodePages.dll
+31/10/2023  12:03            69.896 System.Windows.Extensions.dll
+               2 archivos        813.592 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\bin\Debug\net6.0-windows\runtimes\win-x64
+
+04/11/2025  13:33    <DIR>          .
+04/11/2025  13:33    <DIR>          ..
+05/11/2025  13:26    <DIR>          native
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\bin\Debug\net6.0-windows\runtimes\win-x64\native
+
+05/11/2025  13:26    <DIR>          .
+05/11/2025  13:26    <DIR>          ..
+26/06/2025  04:28            26.184 comerr64.dll
+26/06/2025  04:28           403.008 gssapi64.dll
+26/06/2025  04:28            69.192 k5sprt64.dll
+26/06/2025  04:28         1.224.256 krb5_64.dll
+26/06/2025  04:28           121.920 krbcc64.dll
+               5 archivos      1.844.560 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\bin\Release
+
+04/11/2025  13:19    <DIR>          .
+04/11/2025  13:19    <DIR>          ..
+04/11/2025  13:19    <DIR>          net6.0-windows
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\bin\Release\net6.0-windows
+
+04/11/2025  13:19    <DIR>          .
+04/11/2025  13:19    <DIR>          ..
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\Conexion
+
+05/11/2025  12:01    <DIR>          .
+05/11/2025  12:01    <DIR>          ..
+05/11/2025  12:01               735 Conexion.cs
+05/11/2025  11:59             2.070 ConexionBD.cs
+04/11/2025  13:18               258 crear_base_y_tabla_fase4.sql
+04/11/2025  13:18             1.195 crear_base_y_tabla_fase5.sql
+               4 archivos          4.258 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\Entidades
+
+04/11/2025  13:18    <DIR>          .
+04/11/2025  13:18    <DIR>          ..
+04/11/2025  13:18             2.100 Carnet.cs
+04/11/2025  13:18               897 Cuota.cs
+04/11/2025  13:18             2.036 Pago.cs
+04/11/2025  13:18             1.253 Persona.cs
+04/11/2025  13:18             2.941 Socio.cs
+               5 archivos          9.227 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\Formularios
+
+05/11/2025  13:17    <DIR>          .
+05/11/2025  13:17    <DIR>          ..
+04/11/2025  13:18             2.154 FrmCarnet.cs
+04/11/2025  13:18             4.165 FrmCarnet.Designer.cs
+04/11/2025  13:18             5.817 FrmCarnet.resx
+04/11/2025  13:18             1.334 FrmComrobantePago.cs
+04/11/2025  13:18             3.126 FrmComrobantePago.Designer.cs
+04/11/2025  13:18             5.817 FrmComrobantePago.resx
+05/11/2025  13:05             4.640 FrmConexion.cs
+05/11/2025  12:16             7.572 FrmConexion.Designer.cs
+05/11/2025  12:16             5.748 FrmConexion.resx
+05/11/2025  13:17             2.297 FrmLogin.cs
+04/11/2025  13:18             5.007 FrmLogin.Designer.cs
+04/11/2025  13:18             5.748 FrmLogin.resx
+04/11/2025  14:02             1.061 FrmMenu.cs
+04/11/2025  14:02             3.620 FrmMenu.Designer.cs
+04/11/2025  14:02             5.748 FrmMenu.resx
+04/11/2025  13:18             7.311 FrmPagos.cs
+04/11/2025  13:18             5.355 FrmPagos.Designer.cs
+04/11/2025  13:18             5.817 FrmPagos.resx
+04/11/2025  13:18            11.789 FrmRegistrarPersona.cs
+04/11/2025  13:18            18.492 FrmRegistrarPersona.Designer.cs
+04/11/2025  13:18             5.748 FrmRegistrarPersona.resx
+04/11/2025  15:51             4.883 FrmReporteCuotas.cs
+04/11/2025  15:33             3.766 FrmReporteCuotas.Designer.cs
+04/11/2025  14:02             5.748 FrmReporteCuotas.resx
+              24 archivos        132.763 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\obj
+
+05/11/2025  13:26    <DIR>          .
+05/11/2025  13:26    <DIR>          ..
+05/11/2025  13:26             2.961 ClubDeportivo.csproj.nuget.dgspec.json
+04/11/2025  13:33             1.325 ClubDeportivo.csproj.nuget.g.props
+04/11/2025  13:33             1.321 ClubDeportivo.csproj.nuget.g.targets
+04/11/2025  13:19    <DIR>          Debug
+04/11/2025  13:33            69.642 project.assets.json
+05/11/2025  13:26             4.158 project.nuget.cache
+04/11/2025  13:19    <DIR>          Release
+               5 archivos         79.407 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\obj\Debug
+
+04/11/2025  13:19    <DIR>          .
+04/11/2025  13:19    <DIR>          ..
+05/11/2025  13:26    <DIR>          net6.0-windows
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\obj\Debug\net6.0-windows
+
+05/11/2025  13:26    <DIR>          .
+05/11/2025  13:26    <DIR>          ..
+04/11/2025  13:19               198 .NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+05/11/2025  13:26           151.040 apphost.exe
+05/11/2025  13:26                 0 ClubDepo.31FF01E1.Up2Date
+05/11/2025  13:26             1.258 ClubDeportivo.AssemblyInfo.cs
+05/11/2025  13:26                66 ClubDeportivo.AssemblyInfoInputs.cache
+05/11/2025  13:26            16.032 ClubDeportivo.assets.cache
+05/11/2025  13:26            10.419 ClubDeportivo.csproj.AssemblyReference.cache
+05/11/2025  13:26                 0 ClubDeportivo.csproj.BuildWithSkipAnalyzers
+05/11/2025  13:26                66 ClubDeportivo.csproj.CoreCompileInputs.cache
+05/11/2025  13:26             6.497 ClubDeportivo.csproj.FileListAbsolute.txt
+05/11/2025  13:26               836 ClubDeportivo.csproj.GenerateResource.cache
+05/11/2025  10:21            20.024 ClubDeportivo.designer.deps.json
+05/11/2025  10:21               610 ClubDeportivo.designer.runtimeconfig.json
+05/11/2025  13:26            76.800 ClubDeportivo.dll
+05/11/2025  13:26               180 ClubDeportivo.Formularios.FrmConexion.resources
+05/11/2025  13:26               180 ClubDeportivo.Formularios.FrmLogin.resources
+05/11/2025  13:26               180 ClubDeportivo.Formularios.FrmMenu.resources
+05/11/2025  13:26               180 ClubDeportivo.Formularios.FrmRegistrarPersona.resources
+05/11/2025  13:26               180 ClubDeportivo.Formularios.FrmReporteCuotas.resources
+05/11/2025  13:26               180 ClubDeportivo.FrmCarnet.resources
+05/11/2025  13:26               180 ClubDeportivo.FrmComprobantePago.resources
+05/11/2025  13:26               180 ClubDeportivo.FrmPagos.resources
+05/11/2025  13:26             1.035 ClubDeportivo.GeneratedMSBuildEditorConfig.editorconfig
+05/11/2025  13:26                66 ClubDeportivo.genruntimeconfig.cache
+04/11/2025  13:19               377 ClubDeportivo.GlobalUsings.g.cs
+05/11/2025  13:26            29.428 ClubDeportivo.pdb
+05/11/2025  13:26            19.749 ClubDeportivo.Properties.Resources.resources
+05/11/2025  13:26               196 ClubDeportivo.sourcelink.json
+05/11/2025  13:26    <DIR>          ref
+05/11/2025  13:26    <DIR>          refint
+              28 archivos        336.137 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\obj\Debug\net6.0-windows\ref
+
+05/11/2025  13:26    <DIR>          .
+05/11/2025  13:26    <DIR>          ..
+05/11/2025  13:26            10.240 ClubDeportivo.dll
+               1 archivos         10.240 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\obj\Debug\net6.0-windows\refint
+
+05/11/2025  13:26    <DIR>          .
+05/11/2025  13:26    <DIR>          ..
+05/11/2025  13:26            10.240 ClubDeportivo.dll
+               1 archivos         10.240 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\obj\Release
+
+04/11/2025  13:19    <DIR>          .
+04/11/2025  13:19    <DIR>          ..
+04/11/2025  13:19    <DIR>          net6.0-windows
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\obj\Release\net6.0-windows
+
+04/11/2025  13:19    <DIR>          .
+04/11/2025  13:19    <DIR>          ..
+04/11/2025  13:19               198 .NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+04/11/2025  13:19             1.260 ClubDeportivo.AssemblyInfo.cs
+04/11/2025  13:19                66 ClubDeportivo.AssemblyInfoInputs.cache
+04/11/2025  13:19             1.035 ClubDeportivo.GeneratedMSBuildEditorConfig.editorconfig
+04/11/2025  13:19               377 ClubDeportivo.GlobalUsings.g.cs
+04/11/2025  13:19    <DIR>          ref
+04/11/2025  13:19    <DIR>          refint
+               5 archivos          2.936 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\obj\Release\net6.0-windows\ref
+
+04/11/2025  13:19    <DIR>          .
+04/11/2025  13:19    <DIR>          ..
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\obj\Release\net6.0-windows\refint
+
+04/11/2025  13:19    <DIR>          .
+04/11/2025  13:19    <DIR>          ..
+               0 archivos              0 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\Properties
+
+04/11/2025  13:18    <DIR>          .
+04/11/2025  13:18    <DIR>          ..
+04/11/2025  13:18             3.395 Resources.Designer.cs
+04/11/2025  13:18             6.226 Resources.resx
+               2 archivos          9.621 bytes
+
+ Directorio de C:\Users\guillermo_chacon\source\repos\GuiLeCha\DSOO_ComC_Grupo8\Resources
+
+04/11/2025  13:18    <DIR>          .
+04/11/2025  13:18    <DIR>          ..
+04/11/2025  13:18            19.257 club_deportivo_logo.jpg
+04/11/2025  13:18            19.257 club_deportivo_logo1.jpg
+               2 archivos         38.514 bytes
+
+     Total de archivos en la lista:
+             173 archivos     14.722.298 bytes
+             194 dirs  12.243.480.576 bytes libres

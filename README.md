@@ -82,6 +82,17 @@ En esta actuailzación se incorporaron las funcionalidades correspondientes al m
 ---
 ## Actualización: 4 de noviembre de 2025
 
-En esta actuailzación se Se incorporó el reporte de cuotas vencidas (Listado Diario de Morosos), e impresión del mismo.
+En esta actualización se incorporó el reporte de cuotas vencidas (Listado Diario de Morosos), e impresión del mismo.
+
+---
+
+## Actualización: 6 de noviembre de 2025
+
+### Cambios principales
+- Se incorporó el formulario de conexión.
+- Se agregó el control de forma de pago (efectivo, tarjeta, 3 cuotas, 6 cuotas).  
+- Se restringió el pago en cuotas solo para socios.  
+- Se revisaron mensajes, validaciones y flujo de registro -> pago -> carnet.  
+- Código revisado y comentado para facilitar su lectura.
 
 ---

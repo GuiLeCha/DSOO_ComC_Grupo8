@@ -5,6 +5,7 @@ using ConexionDB = ClubDeportivo.Conexion.Conexion;
 
 namespace ClubDeportivo
 {
+    // Permite registrar pagos de socios o no socios
     public partial class FrmPagos : Form
     {
         private int idPersonaSeleccionada = 0;
@@ -16,7 +17,7 @@ namespace ClubDeportivo
             InitializeComponent();
         }
 
-        // Constructor usado cuando se abre desde el registro de persona
+        // Se usa cuando el formulario se abre desde el registro de persona
         public FrmPagos(int idPersona, string tipo)
         {
             InitializeComponent();
@@ -28,8 +29,17 @@ namespace ClubDeportivo
         {
             lblNombre.Text = "";
 
+            // Si se recibió una persona, se cargan sus datos
             if (idPersonaSeleccionada != 0)
                 CargarDatosPersona(idPersonaSeleccionada);
+
+            // Cargamos las formas de pago disponibles
+            cboFormaPago.Items.Clear();
+            cboFormaPago.Items.Add("Efectivo");
+            cboFormaPago.Items.Add("Tarjeta");
+            cboFormaPago.Items.Add("3 cuotas");
+            cboFormaPago.Items.Add("6 cuotas");
+            cboFormaPago.SelectedIndex = 0;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -57,7 +67,7 @@ namespace ClubDeportivo
                         lblNombre.Text = dr.GetString("nombre") + " " + dr.GetString("apellido");
                         dr.Close();
 
-                        // Verifica si la persona es socio o no socio
+                        // Verifica si pertenece a socios o no socios
                         string sqlSocio = "SELECT COUNT(*) FROM socios WHERE idPersona = @id";
                         MySqlCommand cmdSocio = new MySqlCommand(sqlSocio, cn);
                         cmdSocio.Parameters.AddWithValue("@id", idPersonaSeleccionada);
@@ -95,25 +105,36 @@ namespace ClubDeportivo
 
             string descripcion = txtDescripcion.Text.Trim();
             string tipoPago = (tipoPersona == "Socio") ? "Cuota" : "Actividad";
+            string formaPago = cboFormaPago.SelectedItem.ToString();
+
+            // Si no es socio, puede pagar solo en efectivo o con tarjeta, pero no en cuotas
+            if (tipoPersona != "Socio" && (formaPago == "3 cuotas" || formaPago == "6 cuotas"))
+            {
+                MessageBox.Show("Solo los socios pueden abonar en cuotas.",
+                    "Forma de pago no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
 
             try
             {
-                // Inserta el pago en la base de datos
+                // Guarda el pago en la base de datos
                 using (MySqlConnection cn = conexion.AbrirConexion())
                 {
-                    string sql = "INSERT INTO pago (idPersona, fecha_pago, monto, tipo_pago, descripcion) " +
-                                 "VALUES (@idPersona, NOW(), @monto, @tipoPago, @descripcion)";
+                    string sql = "INSERT INTO pago (idPersona, fecha_pago, monto, tipo_pago, formaPago, descripcion) " +
+                                 "VALUES (@idPersona, NOW(), @monto, @tipoPago, @formaPago, @descripcion)";
                     MySqlCommand cmd = new MySqlCommand(sql, cn);
                     cmd.Parameters.AddWithValue("@idPersona", idPersonaSeleccionada);
                     cmd.Parameters.AddWithValue("@monto", monto);
                     cmd.Parameters.AddWithValue("@tipoPago", tipoPago);
+                    cmd.Parameters.AddWithValue("@formaPago", formaPago);
                     cmd.Parameters.AddWithValue("@descripcion", descripcion);
                     cmd.ExecuteNonQuery();
                 }
 
-                MessageBox.Show("Pago registrado correctamente.");
+                MessageBox.Show("Pago registrado correctamente.", "Pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Si es socio y aún no tiene carnet, se genera automáticamente
+                // Si es socio y no tiene carnet, se genera automáticamente
                 if (tipoPersona == "Socio")
                 {
                     using (MySqlConnection cn = conexion.AbrirConexion())
@@ -134,7 +155,7 @@ namespace ClubDeportivo
                     }
                 }
 
-                // Genera el comprobante de pago y lo muestra en una ventana aparte
+                // Genera y muestra el comprobante de pago
                 Pago pago = new Pago(idPersonaSeleccionada, monto, tipoPago, descripcion);
                 string comprobante = pago.GenerarComprobante(lblNombre.Text);
 
@@ -147,6 +168,7 @@ namespace ClubDeportivo
             }
         }
 
+        // Carga nombre y tipo de persona al abrir el formulario con un ID ya conocido
         private void CargarDatosPersona(int id)
         {
             try

@@ -2,6 +2,7 @@
 
 namespace ClubDeportivo
 {
+    // Representa una cuota mensual del socio
     public class Cuota
     {
         private int mes;
@@ -24,6 +25,7 @@ namespace ClubDeportivo
             this.pagada = false;
         }
 
+        // Devuelve una descripción legible de la cuota
         public override string ToString()
         {
             string estado = pagada ? "Pagada" : "Pendiente";

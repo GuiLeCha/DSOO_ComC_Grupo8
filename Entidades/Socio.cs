@@ -4,6 +4,7 @@ using ConexionDB = ClubDeportivo.Conexion.Conexion;
 
 namespace ClubDeportivo
 {
+    // Representa a un socio del club, heredando los datos básicos de Persona
     public class Socio : Persona
     {
         private int idSocio;
@@ -25,7 +26,7 @@ namespace ClubDeportivo
             this.cuotaVigente = false;
         }
 
-        // Inserta un nuevo socio en la base de datos
+        // Guarda el nuevo socio en la base de datos
         public void RegistrarEnBD()
         {
             ConexionDB conexion = new ConexionDB();
@@ -49,7 +50,7 @@ namespace ClubDeportivo
             }
         }
 
-        // Actualiza el estado de la cuota del socio
+        // Cambia el estado de la cuota (vigente o no)
         public void ActualizarCuota(bool estado)
         {
             ConexionDB conexion = new ConexionDB();
@@ -73,6 +74,7 @@ namespace ClubDeportivo
             }
         }
 
+        // Devuelve true si el socio tiene la cuota al día
         public bool EsSocioActivo()
         {
             return this.cuotaVigente;

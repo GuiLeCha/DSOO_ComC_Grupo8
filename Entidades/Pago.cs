@@ -2,13 +2,14 @@
 
 namespace ClubDeportivo
 {
+    // Representa un pago realizado por una persona (cuota o actividad)
     public class Pago
     {
         private int id;
         private int idPersona;
         private DateTime fechaPago;
         private double monto;
-        private string tipoPago;      // “Cuota” o “Actividad”
+        private string tipoPago;   // “Cuota” o “Actividad”
         private string descripcion;
 
         public Pago() { }
@@ -34,7 +35,7 @@ namespace ClubDeportivo
             return $"Pago de {tipoPago} - ${monto} ({fechaPago.ToShortDateString()})";
         }
 
-        // Devuelve un comprobante textual del pago
+        // Genera un comprobante simple en texto para mostrar o imprimir
         public string GenerarComprobante(string nombrePersona)
         {
             string comprobante =

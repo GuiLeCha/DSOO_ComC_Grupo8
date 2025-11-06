@@ -4,6 +4,7 @@ using ConexionDB = ClubDeportivo.Conexion.Conexion;
 
 namespace ClubDeportivo
 {
+    // Representa el carnet que se emite al socio
     public class Carnet
     {
         private int idSocio;
@@ -23,12 +24,13 @@ namespace ClubDeportivo
             this.numeroCarnet = "SOC-" + idSocio + "-" + fechaEmision.Year;
         }
 
+        // Crea un carnet nuevo para el socio recibido
         public static Carnet GenerarCarnet(int idSocio)
         {
             return new Carnet(idSocio);
         }
 
-        // Guarda los datos del carnet en la base de datos
+        // Guarda el carnet generado en la base de datos
         public void GuardarEnBD()
         {
             ConexionDB conexion = new ConexionDB();

@@ -5,41 +5,42 @@ using System.Windows.Forms;
 
 namespace ClubDeportivo
 {
+    // Muestra el carnet emitido al socio y permite imprimirlo
     public partial class FrmCarnet : Form
     {
         private Carnet carnetActual;
         private string nombreSocio;
         private PrintDocument printDoc = new PrintDocument();
 
-        // Muestra los datos del carnet emitido
         public FrmCarnet(Carnet carnet, string nombreCompleto)
         {
             InitializeComponent();
             carnetActual = carnet;
             nombreSocio = nombreCompleto;
 
-            // Se asocia el evento de impresión al método que dibuja el carnet
+            // Asocia el evento de impresión con el método que dibuja el carnet
             printDoc.PrintPage += PrintDoc_PrintPage;
         }
 
         private void FrmCarnet_Load(object sender, EventArgs e)
         {
+            // Muestra los datos en pantalla
             lblNombre.Text = nombreSocio;
             lblNumero.Text = carnetActual.NumeroCarnet;
             lblEmision.Text = carnetActual.FechaEmision.ToShortDateString();
         }
 
-        // Abre la vista previa antes de imprimir
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            // Abre la vista previa antes de imprimir
             PrintPreviewDialog vistaPrevia = new PrintPreviewDialog();
             vistaPrevia.Document = printDoc;
             vistaPrevia.ShowDialog();
         }
 
-        // Dibuja el contenido del carnet en la hoja de impresión
         private void PrintDoc_PrintPage(object sender, PrintPageEventArgs e)
         {
+            // Dibuja los datos del carnet en la hoja
             float y = 100;
             Font fuenteTitulo = new Font("Arial", 14, FontStyle.Bold);
             Font fuenteTexto = new Font("Arial", 12);

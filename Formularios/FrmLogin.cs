@@ -5,12 +5,15 @@ using MySql.Data.MySqlClient;
 
 namespace ClubDeportivo.Formularios
 {
+    // Formulario de inicio de sesión del sistema
     public partial class FrmLogin : Form
     {
         public FrmLogin()
         {
             InitializeComponent();
-            this.AcceptButton = btnIngresar; // Permite ingresar con la tecla Enter
+
+            // Permite iniciar sesión con la tecla Enter
+            this.AcceptButton = btnIngresar;
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -30,19 +33,27 @@ namespace ClubDeportivo.Formularios
 
                     if (reader.HasRows)
                     {
-                        MessageBox.Show("Ingreso exitoso. Bienvenido al Club Deportivo.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FrmMenu menu = new FrmMenu();
-                        menu.Show();
+                        MessageBox.Show("Ingreso exitoso. Bienvenido al Club Deportivo.",
+                            "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Abre el menú principal y oculta el login
                         this.Hide();
+                        FrmMenu menu = new FrmMenu();
+                        menu.ShowDialog();
+
+                        // Al cerrar el menú, termina la aplicación
+                        this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Usuario o contraseña incorrectos.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Usuario o contraseña incorrectos.",
+                            "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                     reader.Close();
                 }
 
+                // Limpia los campos luego de intentar ingresar
                 txtUsuario.Clear();
                 txtClave.Clear();
             }
@@ -54,6 +65,7 @@ namespace ClubDeportivo.Formularios
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            // Cierra la aplicación desde la pantalla de login
             Application.Exit();
         }
     }

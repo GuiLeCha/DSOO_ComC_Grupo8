@@ -14,15 +14,20 @@ namespace ClubDeportivo.Formularios
 
         private void FrmRegistrarPersona_Load(object sender, EventArgs e)
         {
+            // Al cargar el formulario inicializamos los valores por defecto
             dtpFechaIngreso.Value = DateTime.Today;
+
+            // Cargamos las opciones de tipo de documento
             cboTipoDocumento.Items.Clear();
             cboTipoDocumento.Items.Add("DNI");
             cboTipoDocumento.Items.Add("Pasaporte");
             cboTipoDocumento.Items.Add("LC/LE");
 
+            // Dejamos seleccionado Socio y apto físico marcado
             rdbSocio.Checked = true;
             chkAptoPresentado.Checked = true;
 
+            // Ocultamos controles que no usamos en esta etapa
             chkCuotaVigente.Visible = false;
             txtNroSocio.Visible = false;
             lbltxtNroSocio.Visible = false;
@@ -32,20 +37,50 @@ namespace ClubDeportivo.Formularios
         {
             try
             {
-                // Validaciones de campos obligatorios y formato
-                if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
-                    string.IsNullOrWhiteSpace(txtApellido.Text) ||
-                    cboTipoDocumento.SelectedIndex == -1 ||
-                    string.IsNullOrWhiteSpace(txtNumeroDocumento.Text) ||
-                    string.IsNullOrWhiteSpace(txtDireccion.Text) ||
-                    string.IsNullOrWhiteSpace(txtTelefono.Text) ||
-                    string.IsNullOrWhiteSpace(txtEmail.Text))
+                // --- Validaciones de campos obligatorios (estilo docente) ---
+                if (txtNombre.Text == "")
                 {
-                    MessageBox.Show("Por favor complete todos los datos antes de continuar.",
-                        "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Debe ingresar el nombre.", "Campo obligatorio");
                     return;
                 }
 
+                if (txtApellido.Text == "")
+                {
+                    MessageBox.Show("Debe ingresar el apellido.", "Campo obligatorio");
+                    return;
+                }
+
+                if (cboTipoDocumento.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Debe seleccionar un tipo de documento.", "Campo obligatorio");
+                    return;
+                }
+
+                if (txtNumeroDocumento.Text == "")
+                {
+                    MessageBox.Show("Debe ingresar el número de documento.", "Campo obligatorio");
+                    return;
+                }
+
+                if (txtDireccion.Text == "")
+                {
+                    MessageBox.Show("Debe ingresar la dirección.", "Campo obligatorio");
+                    return;
+                }
+
+                if (txtTelefono.Text == "")
+                {
+                    MessageBox.Show("Debe ingresar el teléfono.", "Campo obligatorio");
+                    return;
+                }
+
+                if (txtEmail.Text == "")
+                {
+                    MessageBox.Show("Debe ingresar el correo electrónico.", "Campo obligatorio");
+                    return;
+                }
+
+                // --- Validaciones específicas por tipo de dato ---
                 if (!long.TryParse(txtNumeroDocumento.Text, out _) || txtNumeroDocumento.Text.Length > 10)
                 {
                     MessageBox.Show("El número de documento debe contener solo números y tener hasta 10 dígitos.",
@@ -81,11 +116,13 @@ namespace ClubDeportivo.Formularios
                     return;
                 }
 
+                // --- Conectamos con la base de datos ---
                 string cadenaConexion = ConfigurationManager.ConnectionStrings["cadenaConexion"].ConnectionString;
                 using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
                 {
                     conexion.Open();
 
+                    // Verificamos si la persona ya existe
                     string sqlCheck = "SELECT idPersona FROM persona WHERE tipoDocumento = @tipo AND numeroDocumento = @numero";
                     MySqlCommand cmdCheck = new MySqlCommand(sqlCheck, conexion);
                     cmdCheck.Parameters.AddWithValue("@tipo", cboTipoDocumento.Text);
@@ -112,7 +149,8 @@ namespace ClubDeportivo.Formularios
 
                         if (rdbSocio.Checked)
                         {
-                            DialogResult respuesta = MessageBox.Show("La persona ya está registrada como No Socio. ¿Desea convertirla en Socio?",
+                            DialogResult respuesta = MessageBox.Show(
+                                "La persona ya está registrada como No Socio. ¿Desea convertirla en Socio?",
                                 "Confirmar conversión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                             if (respuesta == DialogResult.Yes)
@@ -126,6 +164,9 @@ namespace ClubDeportivo.Formularios
 
                                 MessageBox.Show("La persona fue convertida en socio correctamente.",
                                     "Conversión exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                MessageBox.Show("Datos cargados. Complete el pago para finalizar el registro.",
+                                    "Registro pendiente de pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 FrmPagos frmPagos = new FrmPagos((int)idPersona, "Socio");
                                 frmPagos.ShowDialog();
@@ -141,7 +182,7 @@ namespace ClubDeportivo.Formularios
                     }
                     else
                     {
-                        // Inserta la nueva persona
+                        // --- Nueva persona ---
                         string sqlPersona = "INSERT INTO persona (nombre, apellido, tipoDocumento, numeroDocumento, direccion, telefono, email, fechaNacimiento) " +
                                             "VALUES (@nombre, @apellido, @tipo, @numero, @direccion, @telefono, @correo, @fechaNac)";
                         MySqlCommand cmdPersona = new MySqlCommand(sqlPersona, conexion);
@@ -157,7 +198,7 @@ namespace ClubDeportivo.Formularios
 
                         idPersona = cmdPersona.LastInsertedId;
 
-                        // Inserta socio o no socio según corresponda
+                        // --- Alta según tipo ---
                         if (rdbSocio.Checked)
                         {
                             string sqlSocio = "INSERT INTO socios (idPersona, nroSocioCarnet, fechaIngreso, cuotaVigente) " +
@@ -166,6 +207,9 @@ namespace ClubDeportivo.Formularios
                             cmdSocio.Parameters.AddWithValue("@id", idPersona);
                             cmdSocio.Parameters.AddWithValue("@fecha", dtpFechaIngreso.Value.ToString("yyyy-MM-dd"));
                             cmdSocio.ExecuteNonQuery();
+
+                            MessageBox.Show("Datos cargados. Complete el pago para finalizar el registro.",
+                                "Registro pendiente de pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             FrmPagos frmPagos = new FrmPagos((int)idPersona, "Socio");
                             frmPagos.ShowDialog();
@@ -177,11 +221,14 @@ namespace ClubDeportivo.Formularios
                             cmdNoSocio.Parameters.AddWithValue("@id", idPersona);
                             cmdNoSocio.ExecuteNonQuery();
 
+                            MessageBox.Show("Datos cargados. Complete el pago para finalizar el registro.",
+                                "Registro pendiente de pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                             FrmPagos frmPagos = new FrmPagos((int)idPersona, "NoSocio");
                             frmPagos.ShowDialog();
                         }
 
-                        // Registra el apto físico obligatorio
+                        // --- Apto físico obligatorio ---
                         string sqlApto = "INSERT INTO aptosfisicos (idPersona, fechaPresentacion, observaciones) " +
                                          "VALUES (@id, @fechaApto, @obs)";
                         MySqlCommand cmdApto = new MySqlCommand(sqlApto, conexion);
@@ -190,9 +237,7 @@ namespace ClubDeportivo.Formularios
                         cmdApto.Parameters.AddWithValue("@obs", txtObservacionesApto.Text);
                         cmdApto.ExecuteNonQuery();
 
-                        MessageBox.Show("Registro guardado correctamente junto con el Apto Físico.",
-                            "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                        // Quitamos el mensaje final de "Registro guardado correctamente"
                         LimpiarCampos();
                     }
                 }
@@ -220,7 +265,7 @@ namespace ClubDeportivo.Formularios
         {
             txtNombre.Clear();
             txtApellido.Clear();
-            cboTipoDocumento.SelectedIndex = -1;
+            cboTipoDocumento.SelectedIndex = 0;
             txtNumeroDocumento.Clear();
             txtDireccion.Clear();
             txtTelefono.Clear();

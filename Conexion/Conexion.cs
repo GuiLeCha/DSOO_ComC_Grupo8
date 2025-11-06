@@ -4,9 +4,10 @@ using System.Data;
 
 namespace ClubDeportivo.Conexion
 {
+    // Maneja la conexión general a la base de datos del sistema
     public class Conexion
     {
-        // Abre y devuelve una conexión a la base de datos
+        // Abre y devuelve una conexión activa
         public MySqlConnection AbrirConexion()
         {
             string cadena = ConfigurationManager.ConnectionStrings["cadenaConexion"].ConnectionString;
