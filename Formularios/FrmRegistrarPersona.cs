@@ -5,6 +5,7 @@ using System.Windows.Forms;
 
 namespace ClubDeportivo.Formularios
 {
+    // Permite registrar personas (socios y no socios)
     public partial class FrmRegistrarPersona : Form
     {
         public FrmRegistrarPersona()
@@ -14,30 +15,24 @@ namespace ClubDeportivo.Formularios
 
         private void FrmRegistrarPersona_Load(object sender, EventArgs e)
         {
-            // Al cargar el formulario inicializamos los valores por defecto
-            dtpFechaIngreso.Value = DateTime.Today;
-
             // Cargamos las opciones de tipo de documento
             cboTipoDocumento.Items.Clear();
             cboTipoDocumento.Items.Add("DNI");
             cboTipoDocumento.Items.Add("Pasaporte");
             cboTipoDocumento.Items.Add("LC/LE");
+            cboTipoDocumento.SelectedIndex = 0;
 
-            // Dejamos seleccionado Socio y apto físico marcado
+            // Al cargar el formulario inicializamos los valores por defecto
+            dtpFechaIngreso.Value = DateTime.Today;
             rdbSocio.Checked = true;
             chkAptoPresentado.Checked = true;
-
-            // Ocultamos controles que no usamos en esta etapa
-            chkCuotaVigente.Visible = false;
-            txtNroSocio.Visible = false;
-            lbltxtNroSocio.Visible = false;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
-                // --- Validaciones de campos obligatorios (estilo docente) ---
+                // --- Validaciones de campos obligatorios ---
                 if (txtNombre.Text == "")
                 {
                     MessageBox.Show("Debe ingresar el nombre.", "Campo obligatorio");
@@ -80,7 +75,7 @@ namespace ClubDeportivo.Formularios
                     return;
                 }
 
-                // --- Validaciones específicas por tipo de dato ---
+                // --- Validaciones específicas ---
                 if (!long.TryParse(txtNumeroDocumento.Text, out _) || txtNumeroDocumento.Text.Length > 10)
                 {
                     MessageBox.Show("El número de documento debe contener solo números y tener hasta 10 dígitos.",
@@ -116,7 +111,7 @@ namespace ClubDeportivo.Formularios
                     return;
                 }
 
-                // --- Conectamos con la base de datos ---
+                // --- Conexión con la base de datos ---
                 string cadenaConexion = ConfigurationManager.ConnectionStrings["cadenaConexion"].ConnectionString;
                 using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
                 {
@@ -155,11 +150,9 @@ namespace ClubDeportivo.Formularios
 
                             if (respuesta == DialogResult.Yes)
                             {
-                                string sqlSocio = "INSERT INTO socios (idPersona, nroSocioCarnet, fechaIngreso, cuotaVigente) " +
-                                                  "VALUES (@id, 1001, @fecha, 0)";
+                                string sqlSocio = "INSERT INTO socios (idPersona, fechaIngreso, cuotaVigente) VALUES (@id, CURDATE(), 0)";
                                 MySqlCommand cmdSocio = new MySqlCommand(sqlSocio, conexion);
                                 cmdSocio.Parameters.AddWithValue("@id", idPersona);
-                                cmdSocio.Parameters.AddWithValue("@fecha", dtpFechaIngreso.Value.ToString("yyyy-MM-dd"));
                                 cmdSocio.ExecuteNonQuery();
 
                                 MessageBox.Show("La persona fue convertida en socio correctamente.",
@@ -170,6 +163,10 @@ namespace ClubDeportivo.Formularios
 
                                 FrmPagos frmPagos = new FrmPagos((int)idPersona, "Socio");
                                 frmPagos.ShowDialog();
+
+                                // Limpiamos los campos después de completar el flujo
+                                LimpiarCampos();
+
                             }
                             return;
                         }
@@ -201,11 +198,9 @@ namespace ClubDeportivo.Formularios
                         // --- Alta según tipo ---
                         if (rdbSocio.Checked)
                         {
-                            string sqlSocio = "INSERT INTO socios (idPersona, nroSocioCarnet, fechaIngreso, cuotaVigente) " +
-                                              "VALUES (@id, 1001, @fecha, 0)";
+                            string sqlSocio = "INSERT INTO socios (idPersona, fechaIngreso, cuotaVigente) VALUES (@id, CURDATE(), 0)";
                             MySqlCommand cmdSocio = new MySqlCommand(sqlSocio, conexion);
                             cmdSocio.Parameters.AddWithValue("@id", idPersona);
-                            cmdSocio.Parameters.AddWithValue("@fecha", dtpFechaIngreso.Value.ToString("yyyy-MM-dd"));
                             cmdSocio.ExecuteNonQuery();
 
                             MessageBox.Show("Datos cargados. Complete el pago para finalizar el registro.",
@@ -230,14 +225,12 @@ namespace ClubDeportivo.Formularios
 
                         // --- Apto físico obligatorio ---
                         string sqlApto = "INSERT INTO aptosfisicos (idPersona, fechaPresentacion, observaciones) " +
-                                         "VALUES (@id, @fechaApto, @obs)";
+                                         "VALUES (@id, CURDATE(), @obs)";
                         MySqlCommand cmdApto = new MySqlCommand(sqlApto, conexion);
                         cmdApto.Parameters.AddWithValue("@id", idPersona);
-                        cmdApto.Parameters.AddWithValue("@fechaApto", DateTime.Today.ToString("yyyy-MM-dd"));
                         cmdApto.Parameters.AddWithValue("@obs", txtObservacionesApto.Text);
                         cmdApto.ExecuteNonQuery();
 
-                        // Quitamos el mensaje final de "Registro guardado correctamente"
                         LimpiarCampos();
                     }
                 }
@@ -256,9 +249,7 @@ namespace ClubDeportivo.Formularios
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            FrmMenu frm = new FrmMenu();
-            frm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void LimpiarCampos()

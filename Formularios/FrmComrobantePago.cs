@@ -9,35 +9,50 @@ namespace ClubDeportivo
     public partial class FrmComprobantePago : Form
     {
         private string textoComprobante;
-        private PrintDocument printDoc = new PrintDocument();
 
-        // Recibe el texto del comprobante ya generado
         public FrmComprobantePago(string comprobante)
         {
             InitializeComponent();
             textoComprobante = comprobante;
-            printDoc.PrintPage += PrintDoc_PrintPage;
         }
 
         private void FrmComprobantePago_Load(object sender, EventArgs e)
         {
-            // Muestra el comprobante en el cuadro de texto
-            txtComprobante.Text = textoComprobante;
+            // Texto del comprobante dentro del panel
+            lblTexto.Text = textoComprobante;
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            // Abre la vista previa antes de imprimir
-            PrintPreviewDialog vistaPrevia = new PrintPreviewDialog();
-            vistaPrevia.Document = printDoc;
-            vistaPrevia.ShowDialog();
+            // Objeto de impresión
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(ImprimirComprobante);
+
+            // Ocultamos el botón mientras se imprime
+            btnImprimir.Visible = false;
+
+            // Vista previa
+            PrintPreviewDialog vista = new PrintPreviewDialog();
+            vista.Document = pd;
+            vista.ShowDialog();
+
+            // Volvemos a mostrar el botón
+            btnImprimir.Visible = true;
         }
 
-        private void PrintDoc_PrintPage(object sender, PrintPageEventArgs e)
+        private void ImprimirComprobante(object sender, PrintPageEventArgs e)
         {
-            // Dibuja el texto del comprobante en la hoja
-            Font fuente = new Font("Consolas", 10);
-            e.Graphics.DrawString(textoComprobante, fuente, Brushes.Black, 80, 100);
+            // Capturamos solo el panel del comprobante
+            int ancho = pnlComprobante.Width;
+            int alto = pnlComprobante.Height;
+
+            Rectangle bounds = new Rectangle(0, 0, ancho, alto);
+            Bitmap img = new Bitmap(ancho, alto);
+            pnlComprobante.DrawToBitmap(img, bounds);
+
+            // Dibujamos la imagen del panel en la hoja
+            Point p = new Point(100, 100);
+            e.Graphics.DrawImage(img, p);
         }
     }
 }

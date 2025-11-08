@@ -118,7 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="club_deportivo_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\club_deportivo_logo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icono_logo_color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo_color.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icono del logo del club</comment>
+  </data>
+  <data name="Logo_byn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo_b&amp;n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Logo del club en blanco y negro</comment>
+  </data>
+  <data name="Logo_color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo_color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Logo del club en color</comment>
   </data>
 </root>

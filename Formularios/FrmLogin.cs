@@ -18,6 +18,7 @@ namespace ClubDeportivo.Formularios
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            // Objeto de conexión a la base de datos
             Conexion.Conexion con = new Conexion.Conexion();
 
             try
@@ -33,7 +34,7 @@ namespace ClubDeportivo.Formularios
 
                     if (reader.HasRows)
                     {
-                        MessageBox.Show("Ingreso exitoso. Bienvenido al Club Deportivo.",
+                        MessageBox.Show("Ingreso exitoso. \nBienvenido al Club Deportivo.",
                             "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         // Abre el menú principal y oculta el login
@@ -53,7 +54,7 @@ namespace ClubDeportivo.Formularios
                     reader.Close();
                 }
 
-                // Limpia los campos luego de intentar ingresar
+                // Limpia los campos después del intento
                 txtUsuario.Clear();
                 txtClave.Clear();
             }

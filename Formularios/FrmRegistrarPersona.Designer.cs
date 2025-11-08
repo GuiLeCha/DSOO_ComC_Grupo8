@@ -3,12 +3,12 @@
     partial class FrmRegistrarPersona
     {
         /// <summary>
-        /// Required designer variable.
+        ///  Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        ///  Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,429 +23,400 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            txtNombre = new TextBox();
-            txtApellido = new TextBox();
-            cboTipoDocumento = new ComboBox();
-            txtNumeroDocumento = new TextBox();
-            txtDireccion = new TextBox();
-            txtTelefono = new TextBox();
-            txtEmail = new TextBox();
-            dtpFechaNacimiento = new DateTimePicker();
-            txtNroSocio = new TextBox();
-            dtpFechaIngreso = new DateTimePicker();
-            chkCuotaVigente = new CheckBox();
-            btnGuardar = new Button();
-            btnLimpiar = new Button();
-            btnVolver = new Button();
-            lblDatosPersonales = new Label();
-            lblDatosDeSocio = new Label();
-            lblNombre = new Label();
-            lblApellido = new Label();
-            lblTipoDocumento = new Label();
-            lblNumeroDocumento = new Label();
-            lblDireccion = new Label();
-            lblTelefono = new Label();
-            lblEmail = new Label();
-            lblFechaNacimiento = new Label();
-            lbltxtNroSocio = new Label();
-            lblFechaIngreso = new Label();
-            chkAptoPresentado = new CheckBox();
-            txtObservacionesApto = new TextBox();
-            grpTipoPersona = new GroupBox();
-            rdbNoSocio = new RadioButton();
-            rdbSocio = new RadioButton();
-            lblAptoFisico = new Label();
-            grpTipoPersona.SuspendLayout();
-            SuspendLayout();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.grpDatosPersonales = new System.Windows.Forms.GroupBox();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaNacimiento = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.txtNumeroDocumento = new System.Windows.Forms.TextBox();
+            this.lblNumeroDocumento = new System.Windows.Forms.Label();
+            this.cboTipoDocumento = new System.Windows.Forms.ComboBox();
+            this.lblTipoDocumento = new System.Windows.Forms.Label();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.grpTipoApto = new System.Windows.Forms.GroupBox();
+            this.txtObservacionesApto = new System.Windows.Forms.TextBox();
+            this.lblObservacionesApto = new System.Windows.Forms.Label();
+            this.chkAptoPresentado = new System.Windows.Forms.CheckBox();
+            this.rdbNoSocio = new System.Windows.Forms.RadioButton();
+            this.rdbSocio = new System.Windows.Forms.RadioButton();
+            this.grpDatosSocio = new System.Windows.Forms.GroupBox();
+            this.dtpFechaIngreso = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaIngreso = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.grpDatosPersonales.SuspendLayout();
+            this.grpTipoApto.SuspendLayout();
+            this.grpDatosSocio.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // txtNombre
+            // lblTitulo
             // 
-            txtNombre.Location = new Point(158, 63);
-            txtNombre.Margin = new Padding(3, 4, 3, 4);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(212, 27);
-            txtNombre.TabIndex = 0;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTitulo.Location = new System.Drawing.Point(160, 10);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(356, 25);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Registro de Persona (Socio / No Socio)";
             // 
-            // txtApellido
+            // grpDatosPersonales
             // 
-            txtApellido.Location = new Point(510, 63);
-            txtApellido.Margin = new Padding(3, 4, 3, 4);
-            txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(206, 27);
-            txtApellido.TabIndex = 1;
-            // 
-            // cboTipoDocumento
-            // 
-            cboTipoDocumento.FormattingEnabled = true;
-            cboTipoDocumento.Location = new Point(232, 106);
-            cboTipoDocumento.Margin = new Padding(3, 4, 3, 4);
-            cboTipoDocumento.Name = "cboTipoDocumento";
-            cboTipoDocumento.Size = new Size(138, 28);
-            cboTipoDocumento.TabIndex = 2;
-            // 
-            // txtNumeroDocumento
-            // 
-            txtNumeroDocumento.Location = new Point(584, 101);
-            txtNumeroDocumento.Margin = new Padding(3, 4, 3, 4);
-            txtNumeroDocumento.Name = "txtNumeroDocumento";
-            txtNumeroDocumento.Size = new Size(132, 27);
-            txtNumeroDocumento.TabIndex = 3;
-            // 
-            // txtDireccion
-            // 
-            txtDireccion.Location = new Point(165, 140);
-            txtDireccion.Margin = new Padding(3, 4, 3, 4);
-            txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new Size(551, 27);
-            txtDireccion.TabIndex = 4;
-            // 
-            // txtTelefono
-            // 
-            txtTelefono.Location = new Point(165, 176);
-            txtTelefono.Margin = new Padding(3, 4, 3, 4);
-            txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(145, 27);
-            txtTelefono.TabIndex = 5;
-            // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(520, 179);
-            txtEmail.Margin = new Padding(3, 4, 3, 4);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(196, 27);
-            txtEmail.TabIndex = 6;
+            this.grpDatosPersonales.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.grpDatosPersonales.Controls.Add(this.dtpFechaNacimiento);
+            this.grpDatosPersonales.Controls.Add(this.lblFechaNacimiento);
+            this.grpDatosPersonales.Controls.Add(this.txtEmail);
+            this.grpDatosPersonales.Controls.Add(this.lblEmail);
+            this.grpDatosPersonales.Controls.Add(this.txtTelefono);
+            this.grpDatosPersonales.Controls.Add(this.lblTelefono);
+            this.grpDatosPersonales.Controls.Add(this.txtDireccion);
+            this.grpDatosPersonales.Controls.Add(this.lblDireccion);
+            this.grpDatosPersonales.Controls.Add(this.txtNumeroDocumento);
+            this.grpDatosPersonales.Controls.Add(this.lblNumeroDocumento);
+            this.grpDatosPersonales.Controls.Add(this.cboTipoDocumento);
+            this.grpDatosPersonales.Controls.Add(this.lblTipoDocumento);
+            this.grpDatosPersonales.Controls.Add(this.txtApellido);
+            this.grpDatosPersonales.Controls.Add(this.lblApellido);
+            this.grpDatosPersonales.Controls.Add(this.txtNombre);
+            this.grpDatosPersonales.Controls.Add(this.lblNombre);
+            this.grpDatosPersonales.Location = new System.Drawing.Point(20, 45);
+            this.grpDatosPersonales.Name = "grpDatosPersonales";
+            this.grpDatosPersonales.Size = new System.Drawing.Size(650, 190);
+            this.grpDatosPersonales.TabIndex = 1;
+            this.grpDatosPersonales.TabStop = false;
+            this.grpDatosPersonales.Text = "Datos Personales";
             // 
             // dtpFechaNacimiento
             // 
-            dtpFechaNacimiento.Format = DateTimePickerFormat.Short;
-            dtpFechaNacimiento.Location = new Point(255, 211);
-            dtpFechaNacimiento.Margin = new Padding(3, 4, 3, 4);
-            dtpFechaNacimiento.MaxDate = new DateTime(2100, 12, 31, 0, 0, 0, 0);
-            dtpFechaNacimiento.MinDate = new DateTime(1800, 1, 1, 0, 0, 0, 0);
-            dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            dtpFechaNacimiento.Size = new Size(115, 27);
-            dtpFechaNacimiento.TabIndex = 7;
-            dtpFechaNacimiento.UseWaitCursor = true;
-            // 
-            // txtNroSocio
-            // 
-            txtNroSocio.Location = new Point(213, 480);
-            txtNroSocio.Margin = new Padding(3, 4, 3, 4);
-            txtNroSocio.Name = "txtNroSocio";
-            txtNroSocio.ReadOnly = true;
-            txtNroSocio.Size = new Size(114, 27);
-            txtNroSocio.TabIndex = 8;
-            txtNroSocio.Visible = false;
-            // 
-            // dtpFechaIngreso
-            // 
-            dtpFechaIngreso.Format = DateTimePickerFormat.Short;
-            dtpFechaIngreso.Location = new Point(213, 445);
-            dtpFechaIngreso.Margin = new Padding(3, 4, 3, 4);
-            dtpFechaIngreso.MaxDate = new DateTime(2100, 12, 31, 0, 0, 0, 0);
-            dtpFechaIngreso.MinDate = new DateTime(1800, 1, 1, 0, 0, 0, 0);
-            dtpFechaIngreso.Name = "dtpFechaIngreso";
-            dtpFechaIngreso.Size = new Size(115, 27);
-            dtpFechaIngreso.TabIndex = 9;
-            // 
-            // chkCuotaVigente
-            // 
-            chkCuotaVigente.AutoSize = true;
-            chkCuotaVigente.Location = new Point(376, 465);
-            chkCuotaVigente.Margin = new Padding(3, 4, 3, 4);
-            chkCuotaVigente.Name = "chkCuotaVigente";
-            chkCuotaVigente.Size = new Size(123, 24);
-            chkCuotaVigente.TabIndex = 10;
-            chkCuotaVigente.Text = "Cuota vigente";
-            chkCuotaVigente.UseVisualStyleBackColor = true;
-            chkCuotaVigente.Visible = false;
-            // 
-            // btnGuardar
-            // 
-            btnGuardar.Location = new Point(174, 580);
-            btnGuardar.Margin = new Padding(3, 4, 3, 4);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(88, 61);
-            btnGuardar.TabIndex = 11;
-            btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = true;
-            btnGuardar.Click += btnGuardar_Click;
-            // 
-            // btnLimpiar
-            // 
-            btnLimpiar.Location = new Point(376, 580);
-            btnLimpiar.Margin = new Padding(3, 4, 3, 4);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(90, 63);
-            btnLimpiar.TabIndex = 12;
-            btnLimpiar.Text = "Limpiar";
-            btnLimpiar.UseVisualStyleBackColor = true;
-            btnLimpiar.Click += btnLimpiar_Click;
-            // 
-            // btnVolver
-            // 
-            btnVolver.Location = new Point(583, 580);
-            btnVolver.Margin = new Padding(3, 4, 3, 4);
-            btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(87, 60);
-            btnVolver.TabIndex = 13;
-            btnVolver.Text = "Volver al menú";
-            btnVolver.UseVisualStyleBackColor = true;
-            btnVolver.Click += btnVolver_Click;
-            // 
-            // lblDatosPersonales
-            // 
-            lblDatosPersonales.AutoSize = true;
-            lblDatosPersonales.Location = new Point(153, 24);
-            lblDatosPersonales.Name = "lblDatosPersonales";
-            lblDatosPersonales.Size = new Size(121, 20);
-            lblDatosPersonales.TabIndex = 14;
-            lblDatosPersonales.Text = "Datos Personales";
-            // 
-            // lblDatosDeSocio
-            // 
-            lblDatosDeSocio.AutoSize = true;
-            lblDatosDeSocio.Location = new Point(116, 403);
-            lblDatosDeSocio.Name = "lblDatosDeSocio";
-            lblDatosDeSocio.Size = new Size(110, 20);
-            lblDatosDeSocio.TabIndex = 15;
-            lblDatosDeSocio.Text = "Datos de Socio";
-            // 
-            // lblNombre
-            // 
-            lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(84, 64);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(67, 20);
-            lblNombre.TabIndex = 16;
-            lblNombre.Text = "Nombre:";
-            // 
-            // lblApellido
-            // 
-            lblApellido.AutoSize = true;
-            lblApellido.Location = new Point(431, 66);
-            lblApellido.Name = "lblApellido";
-            lblApellido.Size = new Size(69, 20);
-            lblApellido.TabIndex = 17;
-            lblApellido.Text = "Apellido:";
-            // 
-            // lblTipoDocumento
-            // 
-            lblTipoDocumento.AutoSize = true;
-            lblTipoDocumento.Location = new Point(84, 109);
-            lblTipoDocumento.Name = "lblTipoDocumento";
-            lblTipoDocumento.Size = new Size(142, 20);
-            lblTipoDocumento.TabIndex = 18;
-            lblTipoDocumento.Text = "Tipo de Documento";
-            // 
-            // lblNumeroDocumento
-            // 
-            lblNumeroDocumento.AutoSize = true;
-            lblNumeroDocumento.Location = new Point(431, 101);
-            lblNumeroDocumento.Name = "lblNumeroDocumento";
-            lblNumeroDocumento.Size = new Size(129, 20);
-            lblNumeroDocumento.TabIndex = 19;
-            lblNumeroDocumento.Text = "Num. Documento:";
-            // 
-            // lblDireccion
-            // 
-            lblDireccion.AutoSize = true;
-            lblDireccion.Location = new Point(84, 143);
-            lblDireccion.Name = "lblDireccion";
-            lblDireccion.Size = new Size(75, 20);
-            lblDireccion.TabIndex = 20;
-            lblDireccion.Text = "Direccion:";
-            // 
-            // lblTelefono
-            // 
-            lblTelefono.AutoSize = true;
-            lblTelefono.Location = new Point(84, 179);
-            lblTelefono.Name = "lblTelefono";
-            lblTelefono.Size = new Size(70, 20);
-            lblTelefono.TabIndex = 21;
-            lblTelefono.Text = "Teléfono:";
-            // 
-            // lblEmail
-            // 
-            lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(465, 182);
-            lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(49, 20);
-            lblEmail.TabIndex = 22;
-            lblEmail.Text = "Email:";
+            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(130, 161);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(101, 23);
+            this.dtpFechaNacimiento.TabIndex = 15;
             // 
             // lblFechaNacimiento
             // 
-            lblFechaNacimiento.AutoSize = true;
-            lblFechaNacimiento.Location = new Point(84, 216);
-            lblFechaNacimiento.Name = "lblFechaNacimiento";
-            lblFechaNacimiento.Size = new Size(152, 20);
-            lblFechaNacimiento.TabIndex = 23;
-            lblFechaNacimiento.Text = "Fecha de Nacimiento:";
+            this.lblFechaNacimiento.AutoSize = true;
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(20, 165);
+            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(106, 15);
+            this.lblFechaNacimiento.TabIndex = 14;
+            this.lblFechaNacimiento.Text = "Fecha Nacimiento:";
             // 
-            // lbltxtNroSocio
+            // txtEmail
             // 
-            lbltxtNroSocio.AutoSize = true;
-            lbltxtNroSocio.Location = new Point(83, 480);
-            lbltxtNroSocio.Name = "lbltxtNroSocio";
-            lbltxtNroSocio.Size = new Size(78, 20);
-            lbltxtNroSocio.TabIndex = 24;
-            lbltxtNroSocio.Text = "Nro Socio:";
-            lbltxtNroSocio.Visible = false;
+            this.txtEmail.Location = new System.Drawing.Point(420, 132);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(180, 23);
+            this.txtEmail.TabIndex = 13;
             // 
-            // lblFechaIngreso
+            // lblEmail
             // 
-            lblFechaIngreso.AutoSize = true;
-            lblFechaIngreso.Location = new Point(83, 443);
-            lblFechaIngreso.Name = "lblFechaIngreso";
-            lblFechaIngreso.Size = new Size(124, 20);
-            lblFechaIngreso.TabIndex = 25;
-            lblFechaIngreso.Text = "Fecha de Ingreso:";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(340, 135);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(39, 15);
+            this.lblEmail.TabIndex = 12;
+            this.lblEmail.Text = "Email:";
             // 
-            // chkAptoPresentado
+            // txtTelefono
             // 
-            chkAptoPresentado.AutoSize = true;
-            chkAptoPresentado.Location = new Point(391, 322);
-            chkAptoPresentado.Name = "chkAptoPresentado";
-            chkAptoPresentado.Size = new Size(182, 24);
-            chkAptoPresentado.TabIndex = 26;
-            chkAptoPresentado.Text = "Apto físico presentado";
-            chkAptoPresentado.UseVisualStyleBackColor = true;
+            this.txtTelefono.Location = new System.Drawing.Point(130, 132);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(180, 23);
+            this.txtTelefono.TabIndex = 11;
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(20, 135);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(55, 15);
+            this.lblTelefono.TabIndex = 10;
+            this.lblTelefono.Text = "Teléfono:";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(130, 97);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(470, 23);
+            this.txtDireccion.TabIndex = 9;
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(20, 100);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(60, 15);
+            this.lblDireccion.TabIndex = 8;
+            this.lblDireccion.Text = "Dirección:";
+            // 
+            // txtNumeroDocumento
+            // 
+            this.txtNumeroDocumento.Location = new System.Drawing.Point(420, 61);
+            this.txtNumeroDocumento.Name = "txtNumeroDocumento";
+            this.txtNumeroDocumento.Size = new System.Drawing.Size(180, 23);
+            this.txtNumeroDocumento.TabIndex = 7;
+            // 
+            // lblNumeroDocumento
+            // 
+            this.lblNumeroDocumento.AutoSize = true;
+            this.lblNumeroDocumento.Location = new System.Drawing.Point(340, 65);
+            this.lblNumeroDocumento.Name = "lblNumeroDocumento";
+            this.lblNumeroDocumento.Size = new System.Drawing.Size(69, 15);
+            this.lblNumeroDocumento.TabIndex = 6;
+            this.lblNumeroDocumento.Text = "N° Docum.:";
+            // 
+            // cboTipoDocumento
+            // 
+            this.cboTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoDocumento.FormattingEnabled = true;
+            this.cboTipoDocumento.Items.AddRange(new object[] {
+            "DNI",
+            "LC",
+            "LE"});
+            this.cboTipoDocumento.Location = new System.Drawing.Point(130, 61);
+            this.cboTipoDocumento.Name = "cboTipoDocumento";
+            this.cboTipoDocumento.Size = new System.Drawing.Size(180, 23);
+            this.cboTipoDocumento.TabIndex = 5;
+            // 
+            // lblTipoDocumento
+            // 
+            this.lblTipoDocumento.AutoSize = true;
+            this.lblTipoDocumento.Location = new System.Drawing.Point(20, 65);
+            this.lblTipoDocumento.Name = "lblTipoDocumento";
+            this.lblTipoDocumento.Size = new System.Drawing.Size(99, 15);
+            this.lblTipoDocumento.TabIndex = 4;
+            this.lblTipoDocumento.Text = "Tipo Documento:";
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Location = new System.Drawing.Point(420, 27);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(180, 23);
+            this.txtApellido.TabIndex = 3;
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(340, 30);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(54, 15);
+            this.lblApellido.TabIndex = 2;
+            this.lblApellido.Text = "Apellido:";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(130, 27);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(180, 23);
+            this.txtNombre.TabIndex = 1;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(20, 30);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(54, 15);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre:";
+            // 
+            // grpTipoApto
+            // 
+            this.grpTipoApto.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.grpTipoApto.Controls.Add(this.txtObservacionesApto);
+            this.grpTipoApto.Controls.Add(this.lblObservacionesApto);
+            this.grpTipoApto.Controls.Add(this.chkAptoPresentado);
+            this.grpTipoApto.Controls.Add(this.rdbNoSocio);
+            this.grpTipoApto.Controls.Add(this.rdbSocio);
+            this.grpTipoApto.Location = new System.Drawing.Point(20, 245);
+            this.grpTipoApto.Name = "grpTipoApto";
+            this.grpTipoApto.Size = new System.Drawing.Size(650, 100);
+            this.grpTipoApto.TabIndex = 2;
+            this.grpTipoApto.TabStop = false;
+            this.grpTipoApto.Text = "Tipo de Persona y Apto Físico";
             // 
             // txtObservacionesApto
             // 
-            txtObservacionesApto.Location = new Point(600, 310);
-            txtObservacionesApto.Multiline = true;
-            txtObservacionesApto.Name = "txtObservacionesApto";
-            txtObservacionesApto.Size = new Size(250, 50);
-            txtObservacionesApto.TabIndex = 27;
+            this.txtObservacionesApto.Location = new System.Drawing.Point(350, 22);
+            this.txtObservacionesApto.Multiline = true;
+            this.txtObservacionesApto.Name = "txtObservacionesApto";
+            this.txtObservacionesApto.Size = new System.Drawing.Size(260, 50);
+            this.txtObservacionesApto.TabIndex = 12;
             // 
-            // grpTipoPersona
+            // lblObservacionesApto
             // 
-            grpTipoPersona.Controls.Add(rdbNoSocio);
-            grpTipoPersona.Controls.Add(rdbSocio);
-            grpTipoPersona.Location = new Point(68, 281);
-            grpTipoPersona.Name = "grpTipoPersona";
-            grpTipoPersona.Size = new Size(250, 91);
-            grpTipoPersona.TabIndex = 28;
-            grpTipoPersona.TabStop = false;
-            grpTipoPersona.Text = "Tipo de Persona";
+            this.lblObservacionesApto.AutoSize = true;
+            this.lblObservacionesApto.Location = new System.Drawing.Point(250, 25);
+            this.lblObservacionesApto.Name = "lblObservacionesApto";
+            this.lblObservacionesApto.Size = new System.Drawing.Size(87, 15);
+            this.lblObservacionesApto.TabIndex = 11;
+            this.lblObservacionesApto.Text = "Observaciones:";
+            // 
+            // chkAptoPresentado
+            // 
+            this.chkAptoPresentado.AutoSize = true;
+            this.chkAptoPresentado.Location = new System.Drawing.Point(30, 50);
+            this.chkAptoPresentado.Name = "chkAptoPresentado";
+            this.chkAptoPresentado.Size = new System.Drawing.Size(145, 19);
+            this.chkAptoPresentado.TabIndex = 10;
+            this.chkAptoPresentado.Text = "Apto físico presentado";
+            this.chkAptoPresentado.UseVisualStyleBackColor = true;
             // 
             // rdbNoSocio
             // 
-            rdbNoSocio.AutoSize = true;
-            rdbNoSocio.Location = new Point(148, 41);
-            rdbNoSocio.Name = "rdbNoSocio";
-            rdbNoSocio.Size = new Size(91, 24);
-            rdbNoSocio.TabIndex = 1;
-            rdbNoSocio.Text = "No Socio";
-            rdbNoSocio.UseVisualStyleBackColor = true;
+            this.rdbNoSocio.AutoSize = true;
+            this.rdbNoSocio.Location = new System.Drawing.Point(120, 25);
+            this.rdbNoSocio.Name = "rdbNoSocio";
+            this.rdbNoSocio.Size = new System.Drawing.Size(73, 19);
+            this.rdbNoSocio.TabIndex = 9;
+            this.rdbNoSocio.TabStop = true;
+            this.rdbNoSocio.Text = "No Socio";
+            this.rdbNoSocio.UseVisualStyleBackColor = true;
             // 
             // rdbSocio
             // 
-            rdbSocio.AutoSize = true;
-            rdbSocio.Checked = true;
-            rdbSocio.Location = new Point(33, 41);
-            rdbSocio.Name = "rdbSocio";
-            rdbSocio.Size = new Size(67, 24);
-            rdbSocio.TabIndex = 0;
-            rdbSocio.TabStop = true;
-            rdbSocio.Text = "Socio";
-            rdbSocio.UseVisualStyleBackColor = true;
+            this.rdbSocio.AutoSize = true;
+            this.rdbSocio.Location = new System.Drawing.Point(30, 25);
+            this.rdbSocio.Name = "rdbSocio";
+            this.rdbSocio.Size = new System.Drawing.Size(54, 19);
+            this.rdbSocio.TabIndex = 8;
+            this.rdbSocio.TabStop = true;
+            this.rdbSocio.Text = "Socio";
+            this.rdbSocio.UseVisualStyleBackColor = true;
+            //this.rdbSocio.CheckedChanged += new System.EventHandler(this.rdbSocio_CheckedChanged);
             // 
-            // lblAptoFisico
+            // grpDatosSocio
             // 
-            lblAptoFisico.AutoSize = true;
-            lblAptoFisico.Location = new Point(568, 257);
-            lblAptoFisico.Name = "lblAptoFisico";
-            lblAptoFisico.Size = new Size(83, 20);
-            lblAptoFisico.TabIndex = 29;
-            lblAptoFisico.Text = "Apto Físico";
+            this.grpDatosSocio.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.grpDatosSocio.Controls.Add(this.dtpFechaIngreso);
+            this.grpDatosSocio.Controls.Add(this.lblFechaIngreso);
+            this.grpDatosSocio.Location = new System.Drawing.Point(20, 355);
+            this.grpDatosSocio.Name = "grpDatosSocio";
+            this.grpDatosSocio.Size = new System.Drawing.Size(650, 60);
+            this.grpDatosSocio.TabIndex = 3;
+            this.grpDatosSocio.TabStop = false;
+            this.grpDatosSocio.Text = "Datos de Registro";
+            // 
+            // dtpFechaIngreso
+            // 
+            this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaIngreso.Location = new System.Drawing.Point(130, 21);
+            this.dtpFechaIngreso.Name = "dtpFechaIngreso";
+            this.dtpFechaIngreso.Size = new System.Drawing.Size(101, 23);
+            this.dtpFechaIngreso.TabIndex = 1;
+            // 
+            // lblFechaIngreso
+            // 
+            this.lblFechaIngreso.AutoSize = true;
+            this.lblFechaIngreso.Location = new System.Drawing.Point(20, 25);
+            this.lblFechaIngreso.Name = "lblFechaIngreso";
+            this.lblFechaIngreso.Size = new System.Drawing.Size(83, 15);
+            this.lblFechaIngreso.TabIndex = 0;
+            this.lblFechaIngreso.Text = "Fecha Ingreso:";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(160, 430);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(120, 30);
+            this.btnGuardar.TabIndex = 13;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(300, 430);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(120, 30);
+            this.btnLimpiar.TabIndex = 14;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(440, 430);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(120, 30);
+            this.btnVolver.TabIndex = 15;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // FrmRegistrarPersona
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(914, 654);
-            Controls.Add(lblAptoFisico);
-            Controls.Add(grpTipoPersona);
-            Controls.Add(txtObservacionesApto);
-            Controls.Add(chkAptoPresentado);
-            Controls.Add(lblFechaIngreso);
-            Controls.Add(lbltxtNroSocio);
-            Controls.Add(lblFechaNacimiento);
-            Controls.Add(lblEmail);
-            Controls.Add(lblTelefono);
-            Controls.Add(lblDireccion);
-            Controls.Add(lblNumeroDocumento);
-            Controls.Add(lblTipoDocumento);
-            Controls.Add(lblApellido);
-            Controls.Add(lblNombre);
-            Controls.Add(lblDatosDeSocio);
-            Controls.Add(lblDatosPersonales);
-            Controls.Add(btnVolver);
-            Controls.Add(btnLimpiar);
-            Controls.Add(btnGuardar);
-            Controls.Add(chkCuotaVigente);
-            Controls.Add(dtpFechaIngreso);
-            Controls.Add(txtNroSocio);
-            Controls.Add(dtpFechaNacimiento);
-            Controls.Add(txtEmail);
-            Controls.Add(txtTelefono);
-            Controls.Add(txtDireccion);
-            Controls.Add(txtNumeroDocumento);
-            Controls.Add(cboTipoDocumento);
-            Controls.Add(txtApellido);
-            Controls.Add(txtNombre);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "FrmRegistrarPersona";
-            Text = "Club Deportivo - Registrar Persona";
-            Load += FrmRegistrarPersona_Load;
-            grpTipoPersona.ResumeLayout(false);
-            grpTipoPersona.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(700, 480);
+            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.grpDatosSocio);
+            this.Controls.Add(this.grpTipoApto);
+            this.Controls.Add(this.grpDatosPersonales);
+            this.Controls.Add(this.lblTitulo);
+            this.Name = "FrmRegistrarPersona";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Registro de Persona";
+            this.Load += new System.EventHandler(this.FrmRegistrarPersona_Load);
+            this.grpDatosPersonales.ResumeLayout(false);
+            this.grpDatosPersonales.PerformLayout();
+            this.grpTipoApto.ResumeLayout(false);
+            this.grpTipoApto.PerformLayout();
+            this.grpDatosSocio.ResumeLayout(false);
+            this.grpDatosSocio.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private TextBox txtNombre;
-        private TextBox txtApellido;
-        private ComboBox cboTipoDocumento;
-        private TextBox txtNumeroDocumento;
-        private TextBox txtDireccion;
-        private TextBox txtTelefono;
-        private TextBox txtEmail;
-        private DateTimePicker dtpFechaNacimiento;
-        private TextBox txtNroSocio;
-        private DateTimePicker dtpFechaIngreso;
-        private CheckBox chkCuotaVigente;
-        private Button btnGuardar;
-        private Button btnLimpiar;
-        private Button btnVolver;
-        private Label lblDatosPersonales;
-        private Label lblDatosDeSocio;
-        private Label lblNombre;
-        private Label lblApellido;
-        private Label lblTipoDocumento;
-        private Label lblNumeroDocumento;
-        private Label lblDireccion;
-        private Label lblTelefono;
-        private Label lblEmail;
-        private Label lblFechaNacimiento;
-        private Label lbltxtNroSocio;
-        private Label lblFechaIngreso;
-        private CheckBox chkAptoPresentado;
-        private TextBox txtObservacionesApto;
-        private GroupBox grpTipoPersona;
-        private RadioButton rdbNoSocio;
-        private RadioButton rdbSocio;
-        private Label lblAptoFisico;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.GroupBox grpDatosPersonales;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.ComboBox cboTipoDocumento;
+        private System.Windows.Forms.TextBox txtNumeroDocumento;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
+        private System.Windows.Forms.GroupBox grpTipoApto;
+        private System.Windows.Forms.RadioButton rdbSocio;
+        private System.Windows.Forms.RadioButton rdbNoSocio;
+        private System.Windows.Forms.CheckBox chkAptoPresentado;
+        private System.Windows.Forms.TextBox txtObservacionesApto;
+        private System.Windows.Forms.GroupBox grpDatosSocio;
+        private System.Windows.Forms.DateTimePicker dtpFechaIngreso;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblTipoDocumento;
+        private System.Windows.Forms.Label lblNumeroDocumento;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblFechaNacimiento;
+        private System.Windows.Forms.Label lblFechaIngreso;
+        private System.Windows.Forms.Label lblObservacionesApto;
     }
 }

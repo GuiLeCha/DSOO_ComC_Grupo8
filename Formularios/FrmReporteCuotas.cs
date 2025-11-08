@@ -18,6 +18,7 @@ namespace ClubDeportivo.Formularios
         public FrmReporteCuotas()
         {
             InitializeComponent();
+            // Asociamos el evento de impresión con el método que dibuja la página
             printDocument.PrintPage += new PrintPageEventHandler(ImprimirPagina);
         }
 
@@ -72,6 +73,9 @@ namespace ClubDeportivo.Formularios
                 return;
             }
 
+            // Configuramos la orientación en horizontal
+            printDocument.DefaultPageSettings.Landscape = true;
+
             PrintPreviewDialog vistaPrevia = new PrintPreviewDialog();
             vistaPrevia.Document = printDocument;
             vistaPrevia.WindowState = FormWindowState.Maximized;
@@ -79,47 +83,73 @@ namespace ClubDeportivo.Formularios
         }
 
         // Dibuja el contenido del reporte en la hoja de impresión
+        // Dibuja el contenido del reporte en la hoja de impresión
         private void ImprimirPagina(object sender, PrintPageEventArgs e)
         {
+            // Configura la orientación horizontal de la hoja
+            e.PageSettings.Landscape = true;
+
+            // Márgenes y medidas base
             int margenIzq = 50;
             int margenSup = 80;
             int altoFila = 25;
-            int anchoCol = 130;
+
+            // Ajuste individual de columnas según el contenido
+            int anchoDNI = 80;
+            int anchoNombre = 100;
+            int anchoApellido = 100;
+            int anchoEmail = 200;
+            int anchoUltimoPago = 130;
+            int anchoVencimiento = 120;
 
             Font fuenteTitulo = new Font("Arial", 14, FontStyle.Bold);
             Font fuenteCabecera = new Font("Arial", 10, FontStyle.Bold);
             Font fuenteTexto = new Font("Arial", 10, FontStyle.Regular);
 
+            // Encabezado principal
             e.Graphics.DrawString("CLUB DEPORTIVO - Sistema de Gestión", fuenteCabecera, Brushes.Black, margenIzq, 20);
-            e.Graphics.DrawString($"Fecha de impresión: {DateTime.Now:dd/MM/yyyy}", fuenteTexto, Brushes.Black, margenIzq + 450, 20);
+            e.Graphics.DrawString($"Fecha de impresión: {DateTime.Now:dd/MM/yyyy}", fuenteTexto, Brushes.Black, margenIzq + 600, 20);
             e.Graphics.DrawString("Socios con Cuota Vencida al Día de Hoy", fuenteTitulo, Brushes.Black, margenIzq, 50);
 
             int x = margenIzq;
             int y = margenSup;
 
             // Encabezado de columnas
-            foreach (DataColumn col in datosCuotas.Columns)
-            {
-                e.Graphics.DrawString(col.ColumnName, fuenteCabecera, Brushes.Black, x, y);
-                x += anchoCol;
-            }
+            e.Graphics.DrawString("DNI", fuenteCabecera, Brushes.Black, x, y);
+            x += anchoDNI;
+            e.Graphics.DrawString("Nombre", fuenteCabecera, Brushes.Black, x, y);
+            x += anchoNombre;
+            e.Graphics.DrawString("Apellido", fuenteCabecera, Brushes.Black, x, y);
+            x += anchoApellido;
+            e.Graphics.DrawString("Email", fuenteCabecera, Brushes.Black, x, y);
+            x += anchoEmail;
+            e.Graphics.DrawString("Fecha de Último Pago", fuenteCabecera, Brushes.Black, x, y);
+            x += anchoUltimoPago;
+            e.Graphics.DrawString("Vencimiento", fuenteCabecera, Brushes.Black, x, y);
 
-            e.Graphics.DrawLine(Pens.Black, margenIzq, y + altoFila - 5, margenIzq + anchoCol * datosCuotas.Columns.Count, y + altoFila - 5);
+            // Línea separadora bajo los encabezados
+            e.Graphics.DrawLine(Pens.Black, margenIzq, y + altoFila - 5, margenIzq + anchoDNI + anchoNombre + anchoApellido + anchoEmail + anchoUltimoPago + anchoVencimiento, y + altoFila - 5);
             y += altoFila;
 
             // Filas del reporte
             foreach (DataRow fila in datosCuotas.Rows)
             {
                 x = margenIzq;
-                for (int i = 0; i < datosCuotas.Columns.Count; i++)
-                {
-                    e.Graphics.DrawString(fila[i]?.ToString(), fuenteTexto, Brushes.Black, x, y);
-                    x += anchoCol;
-                }
+                e.Graphics.DrawString(fila["DNI"].ToString(), fuenteTexto, Brushes.Black, x, y);
+                x += anchoDNI;
+                e.Graphics.DrawString(fila["Nombre"].ToString(), fuenteTexto, Brushes.Black, x, y);
+                x += anchoNombre;
+                e.Graphics.DrawString(fila["Apellido"].ToString(), fuenteTexto, Brushes.Black, x, y);
+                x += anchoApellido;
+                e.Graphics.DrawString(fila["Email"].ToString(), fuenteTexto, Brushes.Black, x, y);
+                x += anchoEmail;
+                e.Graphics.DrawString(fila["Fecha de Último Pago"].ToString(), fuenteTexto, Brushes.Black, x, y);
+                x += anchoUltimoPago;
+                e.Graphics.DrawString(fila["Vencimiento"].ToString(), fuenteTexto, Brushes.Black, x, y);
 
                 y += altoFila;
 
-                // Si se llena la página, continúa en otra hoja
+                // Control de salto de página
                 if (y > e.MarginBounds.Bottom - 50)
                 {
                     e.HasMorePages = true;
@@ -129,5 +159,6 @@ namespace ClubDeportivo.Formularios
 
             e.HasMorePages = false;
         }
+
     }
 }

@@ -1,21 +1,31 @@
-﻿using System.Windows.Forms;
-
-namespace ClubDeportivo.Formularios
+﻿namespace ClubDeportivo.Formularios
 {
-    partial class FrmReporteCuotas : Form
+    partial class FrmReporteCuotas
     {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private Label lblTitulo;
-        private Button btnImprimir;
-        private DataGridView dgvCuotas;
 
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
+            {
                 components.Dispose();
+            }
             base.Dispose(disposing);
         }
 
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -26,7 +36,7 @@ namespace ClubDeportivo.Formularios
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitulo.Location = new System.Drawing.Point(12, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(776, 32);
@@ -36,7 +46,7 @@ namespace ClubDeportivo.Formularios
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnImprimir.Location = new System.Drawing.Point(620, 420);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(120, 35);
@@ -62,17 +72,26 @@ namespace ClubDeportivo.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 470);
             this.Controls.Add(this.dgvCuotas);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
             this.Name = "FrmReporteCuotas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte de Cuotas Vencidas";
             this.Load += new System.EventHandler(this.FrmReporteCuotas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuotas)).EndInit();
             this.ResumeLayout(false);
+
         }
+
+        #endregion
+
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.DataGridView dgvCuotas;
     }
 }

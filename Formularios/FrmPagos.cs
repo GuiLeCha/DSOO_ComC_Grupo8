@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using ConexionDB = ClubDeportivo.Conexion.Conexion;
+using System.Drawing;
 
 namespace ClubDeportivo
 {
@@ -27,19 +28,24 @@ namespace ClubDeportivo
 
         private void FrmPagos_Load(object sender, EventArgs e)
         {
+            // Estado inicial
             lblNombre.Text = "";
+            lblTipo.Text = "";
 
             // Si se recibió una persona, se cargan sus datos
             if (idPersonaSeleccionada != 0)
                 CargarDatosPersona(idPersonaSeleccionada);
 
-            // Cargamos las formas de pago disponibles
+            // Formas de pago disponibles
             cboFormaPago.Items.Clear();
             cboFormaPago.Items.Add("Efectivo");
             cboFormaPago.Items.Add("Tarjeta");
             cboFormaPago.Items.Add("3 cuotas");
             cboFormaPago.Items.Add("6 cuotas");
             cboFormaPago.SelectedIndex = 0;
+
+            // Color general de fondo
+            this.BackColor = Color.LightSteelBlue;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -73,12 +79,14 @@ namespace ClubDeportivo
                         cmdSocio.Parameters.AddWithValue("@id", idPersonaSeleccionada);
                         int esSocio = Convert.ToInt32(cmdSocio.ExecuteScalar());
 
-                        tipoPersona = (esSocio > 0) ? "Socio" : "NoSocio";
+                        tipoPersona = (esSocio > 0) ? "Socio" : "No Socio";
+                        lblTipo.Text = tipoPersona;
                     }
                     else
                     {
                         MessageBox.Show("No se encontró una persona con ese documento.");
                         lblNombre.Text = "";
+                        lblTipo.Text = "";
                         idPersonaSeleccionada = 0;
                     }
                 }
@@ -91,6 +99,7 @@ namespace ClubDeportivo
 
         private void btnRegistrarPago_Click(object sender, EventArgs e)
         {
+            // Validaciones básicas
             if (idPersonaSeleccionada == 0)
             {
                 MessageBox.Show("Debe seleccionar una persona antes de registrar el pago.");
@@ -107,14 +116,13 @@ namespace ClubDeportivo
             string tipoPago = (tipoPersona == "Socio") ? "Cuota" : "Actividad";
             string formaPago = cboFormaPago.SelectedItem.ToString();
 
-            // Si no es socio, puede pagar solo en efectivo o con tarjeta, pero no en cuotas
+            // Restricción para no socios
             if (tipoPersona != "Socio" && (formaPago == "3 cuotas" || formaPago == "6 cuotas"))
             {
                 MessageBox.Show("Solo los socios pueden abonar en cuotas.",
                     "Forma de pago no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
 
             try
             {
@@ -155,7 +163,7 @@ namespace ClubDeportivo
                     }
                 }
 
-                // Genera y muestra el comprobante de pago
+                // Genera el texto del comprobante y abre el formulario de impresión
                 Pago pago = new Pago(idPersonaSeleccionada, monto, tipoPago, descripcion);
                 string comprobante = pago.GenerarComprobante(lblNombre.Text);
 
@@ -190,7 +198,8 @@ namespace ClubDeportivo
                         cmdSocio.Parameters.AddWithValue("@id", idPersonaSeleccionada);
                         int esSocio = Convert.ToInt32(cmdSocio.ExecuteScalar());
 
-                        tipoPersona = (esSocio > 0) ? "Socio" : "NoSocio";
+                        tipoPersona = (esSocio > 0) ? "Socio" : "No Socio";
+                        lblTipo.Text = tipoPersona;
                     }
                 }
             }

@@ -96,3 +96,12 @@ En esta actualización se incorporó el reporte de cuotas vencidas (Listado Diar
 - Código revisado y comentado para facilitar su lectura.
 
 ---
+
+## Actualización: 8 de noviembre de 2025
+
+### Cambios principales
+- Limpieza de formularios y homogeneización de estilos y nombres.
+- Se realizaron pruebas de todos los casos de uso.
+- Incorporación de logo del club deportivo
+
+---

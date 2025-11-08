@@ -104,7 +104,11 @@ namespace ClubDeportivo.Formularios
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            // Muestra mensaje informativo y finaliza la aplicación
+            MessageBox.Show("Debe configurar la conexión para iniciar la aplicación.",
+                "Conexión no configurada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            Application.Exit();
         }
     }
 }
