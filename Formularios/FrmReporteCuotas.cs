@@ -44,8 +44,9 @@ namespace ClubDeportivo.Formularios
                             DATE_FORMAT(MAX(pa.fecha_pago), '%d/%m/%Y') AS 'Fecha de Último Pago',
                             DATE_FORMAT(DATE_ADD(MAX(pa.fecha_pago), INTERVAL 30 DAY), '%d/%m/%Y') AS 'Vencimiento'
                         FROM socios s
-                        INNER JOIN persona p ON s.idPersona = p.idPersona
+                        LEFT JOIN persona p ON s.idPersona = p.idPersona
                         INNER JOIN pago pa ON pa.idPersona = p.idPersona
+                        WHERE pa.tipo_pago = 'Cuota'
                         GROUP BY p.idPersona, p.numeroDocumento, p.nombre, p.apellido, p.email
                         HAVING DATE(DATE_ADD(MAX(pa.fecha_pago), INTERVAL 30 DAY)) = DATE(CURDATE())
                         ORDER BY p.apellido ASC;";

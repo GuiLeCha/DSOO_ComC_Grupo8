@@ -105,3 +105,12 @@ En esta actualización se incorporó el reporte de cuotas vencidas (Listado Diar
 - Incorporación de logo del club deportivo
 
 ---
+---
+
+## Actualización: 11 de noviembre de 2025
+
+### Cambios principales
+- Se modifica consulta SQL en FrmReporteCuotas para incluir a los no socios que se convirtieron en socios y poseen la cuota vencida
+- Se eliman las BD de fases anteriores que ya no son relevantes, ni compatibles, con esta versión
+
+---

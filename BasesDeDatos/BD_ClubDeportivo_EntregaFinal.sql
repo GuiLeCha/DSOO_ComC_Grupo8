@@ -32,7 +32,7 @@ CREATE TABLE `aptosfisicos` (
   PRIMARY KEY (`idApto`),
   KEY `idPersona` (`idPersona`),
   CONSTRAINT `aptosfisicos_ibfk_1` FOREIGN KEY (`idPersona`) REFERENCES `persona` (`idPersona`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `aptosfisicos` (
 
 LOCK TABLES `aptosfisicos` WRITE;
 /*!40000 ALTER TABLE `aptosfisicos` DISABLE KEYS */;
-INSERT INTO `aptosfisicos` VALUES (1,1,'2025-10-20','ok'),(2,2,'2025-10-21','ok'),(3,3,'2025-10-22','ok'),(4,4,'2025-10-23','ok'),(5,5,'2025-10-24','ok'),(6,6,'2025-10-25','ok'),(7,7,'2025-10-26','ok'),(8,8,'2025-10-27','ok'),(9,9,'2025-10-28','ok'),(10,10,'2025-10-29','ok'),(11,11,'2025-10-30','ok'),(12,12,'2025-10-31','ok'),(13,13,'2025-11-01','ok'),(14,14,'2025-11-02','ok'),(15,15,'2025-11-03','ok'),(16,16,'2025-11-04','ok'),(17,17,'2025-11-05','ok'),(18,18,'2025-11-06','ok'),(19,19,'2025-11-07','ok'),(20,20,'2025-11-08','ok');
+INSERT INTO `aptosfisicos` VALUES (1,1,'2025-10-20','ok'),(2,2,'2025-10-21','ok'),(3,3,'2025-10-22','ok'),(4,4,'2025-10-23','ok'),(5,5,'2025-10-24','ok'),(6,6,'2025-10-25','ok'),(7,7,'2025-10-26','ok'),(8,8,'2025-10-27','ok'),(9,9,'2025-10-28','ok'),(10,10,'2025-10-29','ok'),(11,11,'2025-10-30','ok'),(12,12,'2025-10-31','ok'),(13,13,'2025-11-01','ok'),(14,14,'2025-11-02','ok'),(15,15,'2025-11-03','ok'),(16,16,'2025-11-04','ok'),(17,17,'2025-10-25','ok'),(18,18,'2025-10-25','ok'),(19,19,'2025-10-26','ok'),(20,20,'2025-10-26','ok');
 /*!40000 ALTER TABLE `aptosfisicos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,7 +60,7 @@ CREATE TABLE `carnet` (
   PRIMARY KEY (`id`),
   KEY `idPersona` (`idPersona`),
   CONSTRAINT `carnet_ibfk_1` FOREIGN KEY (`idPersona`) REFERENCES `persona` (`idPersona`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `carnet` (
 
 LOCK TABLES `carnet` WRITE;
 /*!40000 ALTER TABLE `carnet` DISABLE KEYS */;
-INSERT INTO `carnet` VALUES (1,1,'SOC-1-2025','2025-10-01 10:00:00'),(2,2,'SOC-2-2025','2025-09-01 11:00:00'),(3,3,'SOC-3-2025','2025-08-01 12:00:00'),(4,4,'SOC-4-2025','2025-07-01 09:30:00'),(5,5,'SOC-5-2025','2025-06-01 14:20:00'),(6,6,'SOC-6-2025','2025-05-01 16:45:00'),(7,7,'SOC-7-2025','2025-04-01 08:15:00'),(8,8,'SOC-8-2025','2025-03-01 13:50:00'),(9,9,'SOC-9-2024','2024-11-01 10:00:00'),(10,10,'SOC-10-2024','2024-09-01 10:00:00'),(11,11,'SOC-11-2025','2025-11-01 09:00:00');
+INSERT INTO `carnet` VALUES (1,1,'SOC-1-2025','2025-10-01 10:00:00'),(2,2,'SOC-2-2025','2025-09-01 11:00:00'),(3,3,'SOC-3-2025','2025-08-01 12:00:00'),(4,4,'SOC-4-2025','2025-07-01 09:30:00'),(5,5,'SOC-5-2025','2025-06-01 14:20:00'),(6,6,'SOC-6-2025','2025-05-01 16:45:00'),(7,7,'SOC-7-2025','2025-04-01 08:15:00'),(8,8,'SOC-8-2025','2025-03-01 13:50:00'),(9,9,'SOC-9-2024','2024-11-01 10:00:00'),(10,10,'SOC-10-2024','2024-09-01 10:00:00'),(11,11,'SOC-11-2025','2025-11-01 09:00:00'),(18,17,'SOC-17-2025','2025-10-25 09:00:00'),(19,19,'SOC-19-2025','2025-10-26 09:00:00');
 /*!40000 ALTER TABLE `carnet` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +86,7 @@ CREATE TABLE `nosocios` (
   PRIMARY KEY (`idNoSocio`),
   KEY `idPersona` (`idPersona`),
   CONSTRAINT `nosocios_ibfk_1` FOREIGN KEY (`idPersona`) REFERENCES `persona` (`idPersona`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,7 +95,7 @@ CREATE TABLE `nosocios` (
 
 LOCK TABLES `nosocios` WRITE;
 /*!40000 ALTER TABLE `nosocios` DISABLE KEYS */;
-INSERT INTO `nosocios` VALUES (1,11),(2,12),(3,13),(4,14),(5,15),(6,16);
+INSERT INTO `nosocios` VALUES (1,11),(2,12),(3,13),(4,14),(5,15),(6,16),(17,18),(18,20);
 /*!40000 ALTER TABLE `nosocios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,7 +117,7 @@ CREATE TABLE `pago` (
   PRIMARY KEY (`id`),
   KEY `idPersona` (`idPersona`),
   CONSTRAINT `pago_ibfk_1` FOREIGN KEY (`idPersona`) REFERENCES `persona` (`idPersona`)
-) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -126,7 +126,7 @@ CREATE TABLE `pago` (
 
 LOCK TABLES `pago` WRITE;
 /*!40000 ALTER TABLE `pago` DISABLE KEYS */;
-INSERT INTO `pago` VALUES (1,1,'2025-10-01',8000.00,'Cuota','Efectivo','Cuota Octubre 2025'),(2,2,'2025-09-01',8000.00,'Cuota','3 cuotas','Cuota Septiembre 2025'),(3,2,'2025-10-01',8000.00,'Cuota','Tarjeta','Cuota Octubre 2025'),(4,3,'2025-08-01',8000.00,'Cuota','Efectivo','Cuota Agosto 2025'),(5,4,'2025-07-01',8000.00,'Cuota','6 cuotas','Cuota Julio 2025'),(6,4,'2025-08-01',8000.00,'Cuota','Efectivo','Cuota Agosto 2025'),(7,4,'2025-09-01',8000.00,'Cuota','Efectivo','Cuota Septiembre 2025'),(8,5,'2025-06-01',8000.00,'Cuota','Efectivo','Cuota Junio 2025'),(9,5,'2025-07-01',8000.00,'Cuota','Efectivo','Cuota Julio 2025'),(10,5,'2025-08-01',8000.00,'Cuota','Efectivo','Cuota Agosto 2025'),(11,5,'2025-09-01',8000.00,'Cuota','Efectivo','Cuota Septiembre 2025'),(12,6,'2025-05-01',8000.00,'Cuota','Efectivo','Cuota Mayo 2025'),(13,6,'2025-10-01',8000.00,'Cuota','3 cuotas','Cuota Octubre 2025'),(14,7,'2025-04-01',8000.00,'Cuota','Efectivo','Cuota Abril 2025'),(15,8,'2025-03-01',8000.00,'Cuota','Efectivo','Cuota Marzo 2025'),(16,8,'2025-11-01',8000.00,'Cuota','6 cuotas','Cuota Noviembre 2025'),(17,9,'2024-11-01',7500.00,'Cuota','Efectivo','Cuota Noviembre 2024'),(18,9,'2025-10-01',8000.00,'Cuota','Efectivo','Cuota Octubre 2025'),(19,10,'2024-09-01',7500.00,'Cuota','Efectivo','Cuota Septiembre 2024'),(20,11,'2025-10-15',1800.00,'Actividad','Efectivo','Clase única - 15/10'),(21,11,'2025-10-22',1800.00,'Actividad','Efectivo','Clase única - 22/10'),(22,12,'2025-09-05',2000.00,'Actividad','Tarjeta','Clase única - 05/09'),(23,13,'2025-11-02',1600.00,'Actividad','Efectivo','Clase única - 02/11'),(24,14,'2025-08-12',1700.00,'Actividad','Efectivo','Clase única - 12/08'),(25,15,'2025-09-20',2000.00,'Actividad','Tarjeta','Clase única - 20/09'),(26,16,'2025-11-05',1500.00,'Actividad','Efectivo','Clase única - 05/11'),(27,11,'2025-11-01',8000.00,'Cuota','3 cuotas','Cuota Noviembre 2025 - incorporacion');
+INSERT INTO `pago` VALUES (1,1,'2025-10-01',8000.00,'Cuota','Efectivo','Cuota Octubre 2025'),(2,2,'2025-09-01',8000.00,'Cuota','3 cuotas','Cuota Septiembre 2025'),(3,2,'2025-10-01',8000.00,'Cuota','Tarjeta','Cuota Octubre 2025'),(4,3,'2025-08-01',8000.00,'Cuota','Efectivo','Cuota Agosto 2025'),(5,4,'2025-07-01',8000.00,'Cuota','6 cuotas','Cuota Julio 2025'),(6,4,'2025-08-01',8000.00,'Cuota','Efectivo','Cuota Agosto 2025'),(7,4,'2025-09-01',8000.00,'Cuota','Efectivo','Cuota Septiembre 2025'),(8,5,'2025-06-01',8000.00,'Cuota','Efectivo','Cuota Junio 2025'),(9,5,'2025-07-01',8000.00,'Cuota','Efectivo','Cuota Julio 2025'),(10,5,'2025-08-01',8000.00,'Cuota','Efectivo','Cuota Agosto 2025'),(11,5,'2025-09-01',8000.00,'Cuota','Efectivo','Cuota Septiembre 2025'),(12,6,'2025-05-01',8000.00,'Cuota','Efectivo','Cuota Mayo 2025'),(13,6,'2025-10-01',8000.00,'Cuota','3 cuotas','Cuota Octubre 2025'),(14,7,'2025-04-01',8000.00,'Cuota','Efectivo','Cuota Abril 2025'),(15,8,'2025-03-01',8000.00,'Cuota','Efectivo','Cuota Marzo 2025'),(16,8,'2025-11-01',8000.00,'Cuota','6 cuotas','Cuota Noviembre 2025'),(17,9,'2024-11-01',7500.00,'Cuota','Efectivo','Cuota Noviembre 2024'),(18,9,'2025-10-01',8000.00,'Cuota','Efectivo','Cuota Octubre 2025'),(19,10,'2024-09-01',7500.00,'Cuota','Efectivo','Cuota Septiembre 2024'),(20,11,'2025-10-15',1800.00,'Actividad','Efectivo','Clase única - 15/10'),(21,11,'2025-10-22',1800.00,'Actividad','Efectivo','Clase única - 22/10'),(22,12,'2025-09-05',2000.00,'Actividad','Tarjeta','Clase única - 05/09'),(23,13,'2025-11-02',1600.00,'Actividad','Efectivo','Clase única - 02/11'),(24,14,'2025-08-12',1700.00,'Actividad','Efectivo','Clase única - 12/08'),(25,15,'2025-09-20',2000.00,'Actividad','Tarjeta','Clase única - 20/09'),(26,16,'2025-11-05',1500.00,'Actividad','Efectivo','Clase única - 05/11'),(27,11,'2025-11-01',8000.00,'Cuota','3 cuotas','Cuota Noviembre 2025 - incorporacion'),(28,17,'2025-10-25',8000.00,'Cuota','Efectivo','Cuota Octubre 2025'),(29,19,'2025-10-26',8000.00,'Cuota','3 cuotas','Cuota Octubre 2025'),(30,18,'2025-10-25',1800.00,'Actividad','Efectivo','Clase única 25/10/2025'),(31,20,'2025-10-26',2000.00,'Actividad','Tarjeta','Clase única 26/10/2025');
 /*!40000 ALTER TABLE `pago` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -171,13 +171,12 @@ DROP TABLE IF EXISTS `socios`;
 CREATE TABLE `socios` (
   `idSocio` int NOT NULL AUTO_INCREMENT,
   `idPersona` int NOT NULL,
-  `nroSocioCarnet` int DEFAULT NULL,
   `fechaIngreso` date DEFAULT NULL,
   `cuotaVigente` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`idSocio`),
   KEY `idPersona` (`idPersona`),
   CONSTRAINT `socios_ibfk_1` FOREIGN KEY (`idPersona`) REFERENCES `persona` (`idPersona`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -186,7 +185,7 @@ CREATE TABLE `socios` (
 
 LOCK TABLES `socios` WRITE;
 /*!40000 ALTER TABLE `socios` DISABLE KEYS */;
-INSERT INTO `socios` VALUES (1,1,1001,'2025-10-01',1),(2,2,1002,'2025-09-01',1),(3,3,1003,'2025-08-01',1),(4,4,1004,'2025-07-01',1),(5,5,1005,'2025-06-01',1),(6,6,1006,'2025-05-01',1),(7,7,1007,'2025-04-01',1),(8,8,1008,'2025-03-01',1),(9,9,1009,'2024-11-01',1),(10,10,1010,'2024-09-01',1),(11,11,1011,'2025-11-01',1);
+INSERT INTO `socios` VALUES (1,1,'2025-10-01',1),(2,2,'2025-09-01',1),(3,3,'2025-08-01',1),(4,4,'2025-07-01',1),(5,5,'2025-06-01',1),(6,6,'2025-05-01',1),(7,7,'2025-04-01',1),(8,8,'2025-03-01',1),(9,9,'2024-11-01',1),(10,10,'2024-09-01',1),(11,11,'2025-11-01',1),(12,17,'2025-10-25',1),(13,19,'2025-10-26',1);
 /*!40000 ALTER TABLE `socios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -232,4 +231,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-11-09 12:28:23
+-- Dump completed on 2025-11-11 22:07:21
